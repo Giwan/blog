@@ -6,12 +6,16 @@ const style = {
 };
 
 export default () => (
-    <a
-        href="https://ebony-shaded-duckling.glitch.me"
-        target="_blank"
-        rel="noopener noreference"
-        style={style}
-    >
-        Radar Demo
-    </a>
+    <div style={style}>
+        <a
+            href="https://ebony-shaded-duckling.glitch.me"
+            target="_blank"
+            rel="noopener noreference"
+        >
+            <img
+                src="https://res.cloudinary.com/mytoori/image/upload/c_scale,w_300/v1614270412/blog/radar.png"
+                alt="radar animation"
+            />
+        </a>
+    </div>
 );

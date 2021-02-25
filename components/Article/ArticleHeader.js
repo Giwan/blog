@@ -13,7 +13,11 @@ const ArticleHeader = ({ meta, isBlogPost }) => {
     return (
         <div className={styles.articleItem}>
             <header className={styles.articleHeader}>
-                <h1>{meta.title}</h1>
+                {isBlogPost ? (
+                    <h1 className={styles.articleHeaderh1}>{meta.title}</h1>
+                ) : (
+                    <h2 className={styles.articleItemHeader}>{meta.title}</h2>
+                )}
             </header>
             <div className={styles.articleHeaderMetaDetails}>
                 <span>{new Date(meta.published).toDateString()}</span>

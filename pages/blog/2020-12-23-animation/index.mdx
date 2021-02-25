@@ -2,10 +2,10 @@ import Article from "../../../components/Article/Article";
 import RadarDemo from "./RadarDemo";
 
 export const description =
-    "This post looks at making some basic animations using vanilla js";
+    "A look at making some basic animations using vanilla js. Creating a radar animation demonstrates the basics.";
 
 export const meta = {
-    title: "Animation basics",
+    title: "Animation basics. Radar animation screen.",
     description,
     createdDate: "2020-12-23",
     published: "2020-12-23",
@@ -14,17 +14,12 @@ export const meta = {
 
 export default ({ children }) => <Article meta={meta}>{children}</Article>;
 
-Some examples with explanation on how to make them.
-
----
-
-# Radar
-
-The goal of this part is to create a simple radar animation. This is something many of us have seen often in movies. I'm not actually sure if that is what it looks like in real life.
+The goal of this part is to create a \*_simple_ radar screen like animation.
+It should be familiar from the movies.
 
 <RadarDemo />
 
-We start by drawing a canvas element with a fixed width and height of `600`. The rest is boilerplate code to accesss the js and css files.
+Start by drawing a canvas element with a fixed width and height. The rest is boilerplate code to accesss the js and css files.
 
 ```html
 // index.html
@@ -74,7 +69,14 @@ const drawContainerCircle = ({ cx, cy }) => {
 drawContainerCircle(center);
 ```
 
-The `arc` function is give by the `canvas context`. https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc
+The `arc` function is give by the `canvas context`.
+
+<a
+    href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc"
+    target="_blank"
+>
+    developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc
+</a>
 
 ## A dot in the middle
 

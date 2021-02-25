@@ -5,10 +5,11 @@
     --unit: 16px;
 
     --font-size-default: 24px;
-    --font-size-small: 16px;
+    --font-size-small: 18px;
     --font-size-small-x: 14px;
     --font-size-large: 26px;
     --font-size-large-x: 32px;
+    --font-size-large-xx: 48px;
     /* colors */
     --color-primary-dark: #031026;
     /* --color-primary-dark: #222222; */
@@ -19,8 +20,8 @@
 
     /* fonts */
     /* --font-family-header: Helvetica, sans-serif; */
-    --font-family-header: "Roboto Slab", serif;
-    --font-family-text-2: Georgia, Helvetica, sans-serif;
+    --font-family-header: Helvetica, sans-serif;
+    --font-family-text-2: Georgia, serif;
 }
 
 html,
@@ -28,18 +29,19 @@ body {
     padding: 0;
     margin: 0;
     font-size: var(--font-size-default);
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 
+    font-family: var(--font-family-text-2);
     background-color: var(--color-primary-light);
 }
 
 a {
     color: inherit;
-    text-decoration: none;
     transition: scale 0.2s;
     display: inline-block;
     color: var(--color-primary-dark);
+    font-family: var(--font-family-header);
 }
 
 a:active {
@@ -53,7 +55,6 @@ a:active {
 p {
     line-height: 1.75em;
     color: var(--color-primary-dark);
-    /* font-family: var(--font-family-text); */
 }
 
 p code {

@@ -120,3 +120,12 @@ const tools = [
 ];
 
 export default tools;
+
+/*  
+
+Todo:
+
+- Cloudinary
+- Auto draw
+
+*/

@@ -10,7 +10,7 @@ const ArticleItem = ({
 }) => (
     <article className={styles.articleItem}>
         <Link href={"/blog" + link}>
-            <a>
+            <a className={styles.articleItemLink}>
                 <ArticleHeader meta={meta} />
             </a>
         </Link>

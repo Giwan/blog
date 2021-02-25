@@ -1,4 +1,4 @@
-.articleItem:hover h1 {
+.articleItem:hover h2 {
     text-decoration: underline;
 }
 
@@ -7,18 +7,31 @@
     margin-top: var(--unit);
 }
 
-.articleHeader h1 {
+.articleHeader h2 {
     font-weight: normal;
     line-height: 1.2em;
     color: var(--color-primary);
     margin: 0;
     font-size: var(--font-size-large-x);
-    font-family: var(--font-family-header);
+    font-family: var(--font-family-text-2);
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+/* The header shown when in the article
+ * This is written this way because of 
+ * line 25 in article.module.css
+ */
+.articleItem .articleHeaderh1 {
+    font-size: var(--font-size-large-xx);
+    font-weight: 700;
+    margin-bottom: 0;
 }
 
 .articleHeaderSummary {
     margin-bottom: var(--unit);
     font-size: var(--font-size-default);
+    opacity: 0.75;
 }
 
 .articleHeaderSummary p {
@@ -26,6 +39,7 @@
     margin: 0;
     margin-top: calc(var(--unit) / 2);
     font-family: var(--font-family-text-2);
+    font-size: var(--font-size-small);
 }
 
 .articleHeaderMetaDetails {
