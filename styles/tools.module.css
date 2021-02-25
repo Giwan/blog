@@ -1,0 +1,24 @@
+.toolsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: calc(var(--unit) * 2);
+}
+
+.toolsItem {
+    font-size: var(--font-size-small);
+}
+
+.toolsItem h2::after {
+    content: "↗";
+    color: var(--color-accent);
+    margin-left: calc(var(--unit) / 2);
+}
+
+.toolsItem footer label {
+    display: inline-block;
+    margin-right: var(--unit);
+    margin-bottom: var(--unit);
+    padding: calc(var(--unit) / 4) calc(var(--unit) / 2);
+    background-color: var(--color-secondary-background);
+    font-size: var(--font-size-small-x);
+}

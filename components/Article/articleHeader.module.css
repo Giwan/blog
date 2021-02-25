@@ -1,0 +1,40 @@
+.articleItem:hover h1 {
+    text-decoration: underline;
+}
+
+.articleHeader {
+    overflow: hidden;
+    margin-top: var(--unit);
+}
+
+.articleHeader h1 {
+    font-weight: normal;
+    line-height: 1.2em;
+    color: var(--color-primary);
+    margin: 0;
+    font-size: var(--font-size-large-x);
+    font-family: var(--font-family-header);
+}
+
+.articleHeaderSummary {
+    margin-bottom: var(--unit);
+    font-size: var(--font-size-default);
+}
+
+.articleHeaderSummary p {
+    line-height: 1.6em;
+    margin: 0;
+    margin-top: calc(var(--unit) / 2);
+    font-family: var(--font-family-text-2);
+}
+
+.articleHeaderMetaDetails {
+    margin-top: calc(var(--unit) / 2);
+    color: var(--color-secondary-light);
+    font-size: var(--font-size-small);
+}
+
+.articleHeaderMetaDetails span {
+    margin-right: var(--unit);
+    font-size: var(--font-size-small);
+}

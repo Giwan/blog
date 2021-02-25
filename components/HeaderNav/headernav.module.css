@@ -1,0 +1,34 @@
+.headerNav {
+    background-color: var(--color-primary-light);
+}
+
+.headerNav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.headerNav ul li {
+    list-style: none;
+    margin-left: var(--unit);
+    text-transform: uppercase;
+    font-size: var(--font-size-small);
+    font-weight: 600;
+}
+
+.headerNav ul li:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 414px) {
+    .headerNav ul li {
+        font-size: 0.85em;
+    }
+}
+
+.headerNav a {
+    border-bottom: 4px solid transparent;
+}
+
+.activeLink a {
+    border-bottom: calc(var(--unit) / 4) solid var(--color-accent);
+}

@@ -1,0 +1,32 @@
+{
+    "name": "nextjs-mdx",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "screenshot": "node nodeScreenshot.js"
+    },
+    "dependencies": {
+        "@mapbox/rehype-prism": "^0.5.0",
+        "@mdx-js/loader": "^1.6.22",
+        "@mdx-js/react": "^1.6.22",
+        "@next/mdx": "^10.0.5",
+        "@testing-library/jest-dom": "^5.11.9",
+        "@testing-library/react": "^11.2.5",
+        "babel-jest": "^26.6.3",
+        "jest": "^26.6.3",
+        "next": "10.0.5",
+        "react": "17.0.1",
+        "react-dom": "17.0.1"
+    },
+    "devDependencies": {
+        "cloudinary": "^1.25.0",
+        "dotenv": "^8.2.0",
+        "puppeteer": "^7.1.0",
+        "streamifier": "^0.1.1"
+    }
+}

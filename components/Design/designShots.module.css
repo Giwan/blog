@@ -1,0 +1,18 @@
+.designPage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--unit);
+}
+
+.designImage {
+    width: 75%;
+    border: 1px solid var(--color-primary-dark);
+}
+
+.designPage img {
+    transition: transform 0.5s;
+}
+
+.designPage img:hover {
+    transform: scale(1.25);
+}

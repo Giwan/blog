@@ -1,0 +1,35 @@
+.header {
+    cursor: pointer;
+    /* border-bottom: 1px solid silver; */
+    position: fixed;
+    width: 100vw;
+    height: calc(var(--unit) * 5);
+    overflow: hidden;
+    padding: 0 calc(var(--unit) * 2);
+    display: grid;
+    grid-template-columns: 1fr minmax(200px, 2fr);
+    align-items: center;
+    background-color: var(--color-primary-light);
+}
+
+.headerLogo {
+    border-bottom: 1px solid transparent;
+    transition: scale 0.2s;
+}
+
+.headerLogo:hover {
+    border-bottom-color: var(--color-primary-dark);
+}
+
+.headerLogo:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 425px) {
+    .headerLogo {
+        position: relative;
+        width: 50%;
+        min-width: 50px;
+        top: -30%;
+    }
+}
