@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import styles from "./layout.module.css";
 
 const Layout = ({ children, pageTitle, description }) => (

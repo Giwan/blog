@@ -1,4 +1,4 @@
-import Layout from "../components/Layout";
+import Layout from "../components/Layout/Layout";
 import "../node_modules/prismjs/themes/prism-okaidia.css";
 import "../styles/globals.css";
 
