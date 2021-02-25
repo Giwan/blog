@@ -1,4 +1,4 @@
-import PostItem from "../components/PostItem";
+import ArticleItem from "../components/ArticleItem/ArticleItem";
 import { posts } from "../getAllPosts";
 import styles from "./index.module.css";
 import { getDateNumber } from "../utils/helpers";
@@ -23,7 +23,7 @@ export default function IndexPage() {
     return (
         <div className={styles.articleListContainer}>
             {publishedPosts(posts).map((post) => (
-                <PostItem key={post.link} post={post} />
+                <ArticleItem key={post.link} post={post} />
             ))}
         </div>
     );

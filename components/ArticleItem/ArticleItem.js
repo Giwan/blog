@@ -1,13 +1,14 @@
 import Link from "next/link";
-import ArticleHeader from "./Article/ArticleHeader";
+import ArticleHeader from "../Article/ArticleHeader";
+import styles from "./articleItem.module.css";
 
-const PostItem = ({
+const ArticleItem = ({
     post: {
         link,
         module: { meta },
     },
 }) => (
-    <article>
+    <article className={styles.articleItem}>
         <Link href={"/blog" + link}>
             <a>
                 <ArticleHeader meta={meta} />
@@ -16,4 +17,4 @@ const PostItem = ({
     </article>
 );
 
-export default PostItem;
+export default ArticleItem;

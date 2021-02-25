@@ -4,10 +4,10 @@
 :root {
     --unit: 16px;
 
-    --font-size-default: 18px;
+    --font-size-default: 24px;
     --font-size-small: 16px;
     --font-size-small-x: 14px;
-    --font-size-large: 24px;
+    --font-size-large: 26px;
     --font-size-large-x: 32px;
     /* colors */
     --color-primary-dark: #031026;
@@ -20,7 +20,7 @@
     /* fonts */
     /* --font-family-header: Helvetica, sans-serif; */
     --font-family-header: "Roboto Slab", serif;
-    --font-family-text-2: Helvetica, sans-serif;
+    --font-family-text-2: Georgia, Helvetica, sans-serif;
 }
 
 html,
@@ -68,18 +68,6 @@ blockquote p {
     font-size: 2em;
     line-height: 1.1em;
     color: var(--color-secondary-light);
-}
-
-p a {
-    border-bottom: 2px solid var(--color-primary-dark);
-    font-weight: 600;
-}
-
-p a[target="_blank"]::after {
-    content: "↗";
-    color: var(--color-accent);
-    font-weight: 600;
-    margin-left: calc(var(--unit) / 2);
 }
 
 ::selection {

@@ -9,3 +9,15 @@
     font-size: var(--font-size-small);
     font-family: "Courier New", Courier, monospace;
 }
+
+.article a {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.article a[target="_blank"]::after {
+    content: "↗";
+    display: inline-block;
+    color: var(--color-accent);
+    margin-left: calc(var(--unit) / 2);
+}
