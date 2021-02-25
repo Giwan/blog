@@ -27,7 +27,7 @@ const ToolItem = ({ tool }) => (
         >
             <h2>{tool.title}</h2>
 
-            <p>{tool.description}</p>
+            <p className={styles.toolDescription}>{tool.description}</p>
         </a>
         <footer>
             {Array.isArray(tool.labels) &&

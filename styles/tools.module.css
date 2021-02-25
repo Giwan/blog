@@ -6,12 +6,26 @@
 
 .toolsItem {
     font-size: var(--font-size-small);
+    font-family: var(--font-family-text-2);
+}
+
+.toolsItem a {
+    text-decoration: none;
 }
 
 .toolsItem h2::after {
     content: "↗";
     color: var(--color-accent);
     margin-left: calc(var(--unit) / 2);
+    display: inline-block;
+}
+
+.toolsItem:hover h2 {
+    text-decoration: underline;
+}
+
+.toolsItem p {
+    font-family: var(--font-family-text-2);
 }
 
 .toolsItem footer label {
@@ -21,4 +35,5 @@
     padding: calc(var(--unit) / 4) calc(var(--unit) / 2);
     background-color: var(--color-secondary-background);
     font-size: var(--font-size-small-x);
+    font-family: var(--font-family-header);
 }

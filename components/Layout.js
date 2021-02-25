@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
-import styles from "./main.module.css";
+import styles from "./layout.module.css";
 
 const Layout = ({ children, pageTitle, description }) => (
-    <>
+    <div className={styles.layoutContainer}>
         <Head>
             <meta
                 name="viewport"
@@ -15,9 +15,11 @@ const Layout = ({ children, pageTitle, description }) => (
             <title>{pageTitle}</title>
         </Head>
         <Header />
-        <main className={styles.mainContent}>{children}</main>
-        <Footer />
-    </>
+        <div className={styles.mainContainer}>
+            <main className={styles.mainContent}>{children}</main>
+            <Footer />
+        </div>
+    </div>
 );
 
 export default Layout;

@@ -1,5 +1,4 @@
 .header {
-    position: fixed;
     width: 100vw;
     height: calc(var(--unit) * 5);
     overflow: hidden;
@@ -8,7 +7,6 @@
     grid-template-columns: 1fr minmax(200px, 2fr);
     align-items: center;
     background-color: var(--color-primary-light);
-    z-index: 100;
 }
 
 .headerLogo {
