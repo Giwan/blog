@@ -54,10 +54,10 @@ The script returns a reference value that is added to tools data file in `/data/
 // example entry
 
 {
-    url: "https://mytoori.com",
-    imgName: "/v1607982756/landing_pages/mytoori.com",
-    labels: [labels.education, labels.productivity],
-    description: "Bilingual stories",
+    "url": "https://mytoori.com",
+    "imgName": "/v1607982756/landing_pages/mytoori.com",
+    "labels": [labels.education, labels.productivity],
+    "description": "Bilingual stories",
 },
 
 ```
