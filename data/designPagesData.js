@@ -56,12 +56,6 @@ export const designPages = [
         description: "online White board",
     },
     {
-        url: "https://framer.com/",
-        imgName: "/v1614181615/landing_pages/www.framer.com.png",
-        labels: [labels.productivity, labels.interaction],
-        description: "online White board",
-    },
-    {
         url: "https://material.io/",
         imgName: "/v1614182779/landing_pages/material.io.png",
         labels: [labels.productivity, labels.interaction],

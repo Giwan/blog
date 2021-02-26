@@ -2,6 +2,7 @@ import categories from "./categories";
 import labels from "./labels";
 import Cloudinary from "./toolsData/cloudinary.mdx";
 import Autodraw from "./toolsData/autodraw.mdx";
+import Framer from "./toolsData/framer.com.mdx";
 
 const tools = [
     {
@@ -108,6 +109,14 @@ const tools = [
         price: 0,
         category: categories.DESIGN,
         labels: [labels.productivity, labels.design],
+    },
+    {
+        title: "Framer",
+        url: "https://www.framer.com",
+        description: <Framer />,
+        price: 0,
+        category: categories.DESIGN,
+        labels: [labels.productivity, labels.design, labels.prototype],
     },
 ];
 

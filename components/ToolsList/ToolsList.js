@@ -6,7 +6,7 @@ import styles from "../../styles/tools.module.css";
 const ToolsList = () => (
     <section className={styles.toolsList}>
         {tools.map((tool) => (
-            <ToolItem key={tool.title + tool.description} tool={tool} />
+            <ToolItem key={tool.title} tool={tool} />
         ))}
     </section>
 );
@@ -25,9 +25,8 @@ const ToolItem = ({ tool }) => (
             rel="norel noreferrer"
             alt={`${tool.title} - ${tool.description}`}
         >
-            <h2>{tool.title}</h2>
-
-            <p className={styles.toolDescription}>{tool.description}</p>
+            <h2 className={styles.toolsItemTitle}>{tool.title}</h2>
+            <span className={styles.toolDescription}>{tool.description}</span>
         </a>
         <footer>
             {Array.isArray(tool.labels) &&
@@ -38,4 +37,8 @@ const ToolItem = ({ tool }) => (
                 ))}
         </footer>
     </article>
+);
+
+const ToolDescription = ({ description }) => (
+    <span className={styles.toolDescription}>{description}</span>
 );

@@ -7,6 +7,17 @@
 .toolsItem {
     font-size: var(--font-size-small);
     font-family: var(--font-family-text-2);
+    opacity: 0.8;
+    transition: opacity 0.1s;
+}
+
+.toolsItem:hover {
+    opacity: 1;
+}
+
+.toolsItemTitle {
+    font-family: var(--font-family-text-2);
+    font-size: var(--font-size-large);
 }
 
 .toolsItem a {
@@ -24,14 +35,19 @@
     text-decoration: underline;
 }
 
-.toolsItem p {
+.toolDescription {
     font-family: var(--font-family-text-2);
+    line-height: 1.5em;
+}
+
+/* Some tool items are importing an mdx description */
+.toolDescription p {
+    line-height: 1.5em;
 }
 
 .toolsItem footer label {
     display: inline-block;
-    margin-right: var(--unit);
-    margin-bottom: var(--unit);
+    margin: calc(var(--unit) / 2) var(--unit) 0 0;
     padding: calc(var(--unit) / 4) calc(var(--unit) / 2);
     background-color: var(--color-secondary-background);
     font-size: var(--font-size-small-x);

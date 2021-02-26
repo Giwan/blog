@@ -13,5 +13,5 @@
     padding: 0 calc(var(--unit) * 2);
     min-height: 100vh;
     width: 100vw;
-    padding-top: calc(var(--unit) * 7);
+    padding-top: calc(var(--unit) * 4);
 }
