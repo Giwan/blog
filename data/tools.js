@@ -1,31 +1,7 @@
-export const categories = Object.freeze({
-    NOTES: "Notes",
-    DESIGN: "Design",
-    EMAIL: "Email",
-    MARKETING: "Marketing",
-    PROJECT_MANAGEMENT: "Project Management",
-    WRITING: "Writing",
-    READING: "Reading",
-    DEVELOPER: "Developer",
-});
-
-export const labels = Object.freeze({
-    design: "design",
-    inspiration: "inspiration",
-    productivity: "productivity",
-    education: "education",
-    marketing: "marketing",
-    leisure: "leisure",
-    project: "project",
-    management: "management",
-    writing: "writing",
-    reading: "reading",
-    markdown: "markdown",
-    commerce: "commerce",
-    social: "social",
-    engineering: "engineering",
-    interaction: "interaction",
-});
+import categories from "./categories";
+import labels from "./labels";
+import Cloudinary from "./toolsData/cloudinary.mdx";
+import Autodraw from "./toolsData/autodraw.mdx";
 
 const tools = [
     {
@@ -117,6 +93,22 @@ const tools = [
         category: categories.DESIGN,
         labels: [labels.productivity, labels.design],
     },
+    {
+        title: "Cloudinary",
+        url: "https://cloudinary.com/",
+        description: <Cloudinary />,
+        price: 0,
+        category: categories.DEVELOPER,
+        labels: [labels.productivity, labels.image],
+    },
+    {
+        title: "AutoDraw",
+        url: "https://autodraw.com/",
+        description: <Autodraw />,
+        price: 0,
+        category: categories.DESIGN,
+        labels: [labels.productivity, labels.design],
+    },
 ];
 
 export default tools;
@@ -124,8 +116,5 @@ export default tools;
 /*  
 
 Todo:
-
-- Cloudinary
-- Auto draw
 
 */

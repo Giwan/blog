@@ -1,4 +1,4 @@
-import { labels } from "./tools";
+import labels from "./labels";
 
 export const designPages = [
     {
