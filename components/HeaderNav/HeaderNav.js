@@ -4,7 +4,10 @@ import styles from "./headernav.module.css";
 const headerNavData = [
     {
         name: "articles",
-        target: "/",
+        target: {
+            path: "/",
+            routes: ["/blog"],
+        },
     },
     {
         name: "tools",
