@@ -18,4 +18,5 @@ export default Object.freeze({
     reading: "reading",
     social: "social",
     writing: "writing",
+    personal: "personal",
 });
