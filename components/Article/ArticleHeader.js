@@ -8,8 +8,18 @@
  */
 import styles from "./articleHeader.module.css";
 
+const dateOptions = {
+    year: "numeric",
+    month: "long",
+    day: "2-digit",
+};
+
 const ArticleHeader = ({ meta, isBlogPost }) => {
     if (!meta.published) return null;
+    const dateOptionsFiltered = {
+        ...dateOptions,
+        weekday: isBlogPost ? "long" : undefined,
+    };
     return (
         <div className={styles.articleItem}>
             <header className={styles.articleHeader}>
@@ -20,8 +30,13 @@ const ArticleHeader = ({ meta, isBlogPost }) => {
                 )}
             </header>
             <div className={styles.articleHeaderMetaDetails}>
-                <span>{new Date(meta.published).toDateString()}</span>
-                <span>{meta.readTime + " min read"}</span>
+                <span>
+                    {new Date(meta.published).toLocaleDateString(
+                        "en-GB",
+                        dateOptionsFiltered
+                    )}
+                </span>
+                <span>{meta.readTime + " minutes"}</span>
             </div>
             <div className={styles.articleHeaderSummary}>
                 {isBlogPost ? null : <p>{meta.description}</p>}
