@@ -19,4 +19,5 @@ export default Object.freeze({
     social: "social",
     writing: "writing",
     personal: "personal",
+    wireframe: "wireframe"
 });

@@ -7,4 +7,5 @@ export default Object.freeze({
     WRITING: "Writing",
     READING: "Reading",
     DEVELOPER: "Developer",
+    WIREFRAME: "wireframe"
 });
