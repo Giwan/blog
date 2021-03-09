@@ -5,8 +5,8 @@ import { getStyle } from "../../utils/helpers";
 
 const ListItem = ({ name, target }) => (
     <li className={getStyle(useRouter(), styles, target)}>
-        <Link href={typeof target === "object" ? target.path : target}>
-            {name}
+        <Link href={{pathname: typeof target === "object" ? target.path : target}} prefetch={false}>
+            <a alt={name}>{name}</a>
         </Link>
     </li>
 );

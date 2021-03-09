@@ -9,8 +9,10 @@ const ArticleItem = ({
     },
 }) => (
     <article className={styles.articleItem}>
-        <Link href={"/blog" + link}>
-            <a className={styles.articleItemLink}>
+        <Link
+            href={`/blog/${link}`} prefetch={false}
+        >
+            <a alt={meta.title} className={styles.articleItemLink}>
                 <ArticleHeader meta={meta} />
             </a>
         </Link>

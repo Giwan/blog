@@ -17,6 +17,7 @@
 
 .footer li {
     height: calc(var(--unit) * 2);
+
     display: inline-block;
     margin-right: var(--unit);
 }
