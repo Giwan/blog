@@ -5,10 +5,13 @@
  */
 function importAll(r) {
     return r.keys().map((fileName) => ({
-        link: fileName.substr(1).replace(/\/index\.mdx$/, ""),
+        link: stripStartingSlash(stripIndexMdx(fileName)),
         module: r(fileName),
     }));
 }
+
+const stripIndexMdx = (fileName) => fileName.substr(1).replace(/\/index\.mdx$/, ""); 
+const stripStartingSlash = (fileName) => fileName.replace(/^\//, "");
 
 export const posts = importAll(
     require.context("./pages/blog/", true, /\.mdx$/)
