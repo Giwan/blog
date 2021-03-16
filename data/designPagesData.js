@@ -15,6 +15,12 @@ const {
 
 export const designPages = [
     {
+        url: "https://opensubscriptionplatforms.com",
+        imgName: "/v1615927266/landing_pages/opensubscriptionplatforms.com.png",
+        labels: [productivity, design],
+        description: "Open subscriptions manifesto",
+    },
+    {
         url: "https://www.mozilla.org",
         imgName: "/v1608401248/landing_pages/www.mozilla.org.png",
         labels: [productivity],

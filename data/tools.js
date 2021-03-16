@@ -4,6 +4,7 @@ import Cloudinary from "./toolsData/cloudinary.mdx";
 import Autodraw from "./toolsData/autodraw.mdx";
 import Framer from "./toolsData/framer.com.mdx";
 import DrawIO from "./toolsData/draw.io.mdx";
+import Ghost from "./toolsData/ghost.org.mdx";
 
 const tools = [
     {
@@ -126,6 +127,14 @@ const tools = [
         price: 0,
         category: categories.WIREFRAME,
         labels: [labels.productivity, labels.wireframe, labels.prototype],
+    },
+    {
+        title: "ghost.org",
+        url: "https://ghost.org",
+        description: <Ghost />,
+        price: 0,
+        category: categories.WRITING,
+        labels: [labels.productivity, labels.wirting],
     },
 ];
 
