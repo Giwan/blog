@@ -5,6 +5,10 @@ import Autodraw from "./toolsData/autodraw.mdx";
 import Framer from "./toolsData/framer.com.mdx";
 import DrawIO from "./toolsData/draw.io.mdx";
 import Ghost from "./toolsData/ghost.org.mdx";
+import Txtfiddle from "./toolsData/txtfiddle.mdx";
+import Codepen from "./toolsData/codepen.mdx";
+import Codesandbox from "./toolsData/codesandbox.mdx";
+import WeTransfer from "./toolsData/wetransfer.mdx";
 
 const tools = [
     {
@@ -134,8 +138,41 @@ const tools = [
         description: <Ghost />,
         price: 0,
         category: categories.WRITING,
-        labels: [labels.productivity, labels.wirting],
+        labels: [labels.productivity, labels.writing],
     },
+    {
+        title: "txtfiddle.com",
+        url: "https://txtfiddle.com/",
+        description: <Txtfiddle />,
+        price: 0,
+        category: categories.WRITING,
+        labels: [labels.productivity, labels.writing],  
+    },
+    {
+        title: "codepen.io",
+        url: "https://codepen.io",
+        description: <Codepen />,
+        price: 0,
+        category: categories.DEVELOPER,
+        labels: [labels.productivity, labels.engineering], 
+    },
+    {
+        title: "codesandbox.io",
+        url: "https://codesandbox.io/",
+        description: <Codesandbox />,
+        price: 0,
+        category: categories.DEVELOPER,
+        labels: [labels.productivity, labels.engineering], 
+    },
+    {
+        title: "weTransfer.com",
+        url: "https://wetransfer.com/",
+        description: <WeTransfer />,
+        price: 0,
+        category: categories.DATA_MANAGEMENT,
+        labels: [labels.productivity, labels.email], 
+    },
+
 ];
 
 export default tools;

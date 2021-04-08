@@ -6,7 +6,7 @@ import styles from "../../styles/tools.module.css";
 const ToolsList = () => (
     <section className={styles.toolsList}>
         {tools.map((tool) => (
-            <ToolItem key={tool.title} tool={tool} />
+            <ToolItem key={tool.url} tool={tool} />
         ))}
     </section>
 );
@@ -31,7 +31,7 @@ const ToolItem = ({ tool }) => (
         <footer>
             {Array.isArray(tool.labels) &&
                 tool.labels.map((label) => (
-                    <label key={label}>
+                    <label key={label+tool.url}>
                         <span>{label}</span>
                     </label>
                 ))}

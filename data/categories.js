@@ -7,5 +7,7 @@ export default Object.freeze({
     WRITING: "Writing",
     READING: "Reading",
     DEVELOPER: "Developer",
-    WIREFRAME: "wireframe"
+    WIREFRAME: "wireframe",
+    PRODUCTIVITY: "productivity",
+    DATA_MANAGEMENT: "Data Management"
 });
