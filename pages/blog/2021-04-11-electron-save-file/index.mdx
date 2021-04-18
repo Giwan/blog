@@ -1,0 +1,65 @@
+import Article from "../../../components/Article/Article";
+export const description = `Setup a basic electron (desktop) app using snowpack for ReactJS. 
+This article demonstrates how to get up and running.
+No webpack and no create-react-app.`;
+
+export const meta = {
+    title: "ElectronJS saving text to the file system",
+    description,
+    createdDate: "2021-04-18",
+    readTime: 10,
+};
+
+export default ({ children }) => <Article meta={meta}>{children}</Article>;
+
+
+## Preload.js (For security)
+At the moment, the contents of the `.jsx` file only renders some basic text. 
+The goal is to have a **save button** and a `textarea` with text that should save to a file on the user's computer. 
+
+Saving to the user's computer is an action that the browser will not allow.
+It's has security implications. 
+While it's possible to disable in an electron app, it should not be. 
+That would expose the entire computer to security vulnerabilities. 
+
+### Preload.js allows for secure communication
+
+The app wants to send data to the main electron process where it will be saved to the computer.
+That sending and receiving needs to be done securely. Here's how that can be done.
+
+Add a textarea and button to the `index.jsx` file. 
+
+```jsx
+
+// index.jsx
+
+import React from "react";
+import { render } from "react-dom";
+import styles from "./app.module.css"; // optional
+
+const App = () => (
+    <div className={styles.appContainer}>
+        <div className={styles.app}>
+        <textarea placeholder="Enter text which should be sent to the main process"></textarea>
+        <button>save</button>
+        </div>
+    </div>
+); 
+
+render(<App />, document.getElementById("root"));
+
+```
+
+The styling is optional and can be found in the git repository. 
+
+### Saving
+When the save button is clicked, the contents of the textarea should be sent to the main process. 
+There the `fs` package from `node` can be used to save the text to disk. 
+
+Start by adding an onClick to the save button. 
+
+```jsx
+
+
+
+```
