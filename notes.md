@@ -22,3 +22,30 @@ Especially considering the narrow target audience.
 The subject matter is complex and I don't know if I have a good way 
 of solving the issue. 
 There is more thinking needed here. 
+
+
+# Reference Articles
+The design on alistapart.com is quite good. 
+https://alistapart.com/article/now-thats-what-i-call-service-worker/
+
+https://coil.com/discover
+References good sites that I should make a list of
+
+https://producthunt.com 
+This is another good plact to find tools. 
+
+https://webmonetization.org/
+I should problaby look at implemeting this on mytoori.
+It might be a good way to solve the monetization problem. 
+
+
+https://infinitydecentralized.com
+Some kind of new search engine. 
+More information to be found here: 
+https://hackernoon.com/how-were-integrating-web-monetization-into-the-search-engine-experience-u43i34w7
+
+https://www.ethicalads.io
+Ethical ads. There's not much more that needs to be said about that. 
+
+https://dev.to
+Articles for developers. 
