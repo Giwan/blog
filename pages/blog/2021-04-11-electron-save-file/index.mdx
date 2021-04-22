@@ -29,7 +29,7 @@ It might expose the computer to security vulnerabilities.
 
 The renderer process instead send any data that needs to be saved to the main electron process. 
 This article focusses on sending text from the untrustable renderer process to the main process. 
-[The security concerns and mitigation strategies are well documented on electronjs.org](https://www.electronjs.org/docs/tutorial/security)
+<a href="https://www.electronjs.org/docs/tutorial/security" target="_blank">The security concerns and mitigation strategies are well documented on electronjs.org</a>
 
 
 Add a textarea and button to the `index.jsx` file.
@@ -196,4 +196,4 @@ ipcMain.on("SAVE", (e, text) => {
 
 ```
 
-Now that the message text is available in the main process the [dialog api](https://www.electronjs.org/docs/api/dialog) can be used to save the text to disk.
+Now that the message text is available in the main process the <a href="https://www.electronjs.org/docs/api/dialog" target="_blank">Dialog API</a> can be used to save the text to disk.
