@@ -34,7 +34,8 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm run spellcheck"
+            "pre-commit": "npm run spellcheck",
+            "pre-push": "npm test"
         }
     }
 }
