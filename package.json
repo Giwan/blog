@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "next dev && npm run spellcheck",
+        "dev": "next dev",
         "build": "next build",
         "start": "next start",
         "test": "jest",
@@ -32,11 +32,5 @@
         "husky": "^6.0.0",
         "puppeteer": "^7.1.0",
         "streamifier": "^0.1.1"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm run spellcheck",
-            "pre-push": "npm test"
-        }
     }
 }
