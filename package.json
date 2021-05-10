@@ -9,7 +9,8 @@
         "test": "jest",
         "test:watch": "jest --watch",
         "screenshot": "node nodeScreenshot.js",
-        "spellcheck": "mdspell -nar '**/*.mdx'"
+        "spellcheck": "mdspell -nar '**/*.mdx'",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@mapbox/rehype-prism": "^0.5.0",
