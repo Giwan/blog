@@ -42,7 +42,7 @@ npm i @mdx-js/loader @next/mdx
 
 Now that loaders have been installed, they need to be configured.
 
-## Configure `next.config.js` to pickup the MDX files
+## Configure `next.config.js` to pick up the MDX files
 
 In `next.config.js` the following configuration ensures that the `MDX` files are read from the pages directory.
 Note that other file extensions will also be read.
@@ -272,12 +272,12 @@ const exampleFunctionToDemonstrateCodeStyling = () => {
 };
 ```
 
-For the styling to work, essentially the code text block is split into HTML nodes. Those nodes can now have a color applied to them individually.
+For the styling to work, essentially the code text block is split into HTML nodes. Those nodes can now have a colour applied to them individually.
 
 ### Install the Rehype-prism package
 
 Styling the code is done by [rehype-prism](https://github.com/mapbox/rehype-prism).
-It's a plugin for [Rehype](https://github.com/rehypejs/rehype) and performs the hightlighting.
+It's a plugin for [Rehype](https://github.com/rehypejs/rehype) and performs the highlighting.
 
 ```bash
 # Install @mapbox/rehype-prism.
@@ -315,8 +315,8 @@ to do that the following styles are imported.
 
 ## Code styles from Prism
 
-In `_app.js` the css styles are imported from the prism package. The previously installed `prism-okaidia.css` has prism as a dependency.
-The css files in that package can be directly imported into the project.
+In `_app.js` the CSS styles are imported from the prism package. The previously installed `prism-okaidia.css` has prism as a dependency.
+The CSS files in that package can be directly imported into the project.
 
 Note: other styles are also possible.
 

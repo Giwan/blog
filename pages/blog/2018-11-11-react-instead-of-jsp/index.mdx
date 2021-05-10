@@ -12,14 +12,14 @@ export const meta = {
 
 export default ({ children }) => <Article meta={meta}>{children}</Article>;
 
-React can replace Java Server Pages (JSP), handlebarJS, etc. as a templating language on the server. There are various reasons why might want this. Re-using knowledge you already have for example.
+React can replace Java Server Pages (JSP), HandlebarJS, etc. as a templating language on the server. There are various reasons why might want this. Re-using knowledge you already have for example.
 
 Recently I had to work on a project that required JSP (Java Server Pages). My knowledge of JSP is pretty poor and so instead of JSP, I wondered if it would be possible to just use React on the server.
 
 ## The concept
 
 The idea is that react would be executed on the server, resulting in pure HTML and CSS, that is then sent to the client.
-In reality react is simply used where otherwise something like [handlebars.js](https://handlebarsjs.com/) or [ejs](https://github.com/tj/ejs) is used.
+In reality react is simply used where otherwise something like [HandlebarJS](https://handlebarsjs.com/) or [EJS](https://github.com/tj/ejs) is used.
 
 ## The Benefits
 
@@ -27,7 +27,7 @@ The benefit is that if you already know react then you don't need to learn somet
 
 Perhaps more importantly, the component structure. You can write self-contained react components. A rendered view could then consist of one react component or multiple components combined.
 
-JSP and other such templating languages already allow for this but I would argue not elegantly as React. Again existing React knowledge weighs heavy here so your milage might vary.
+JSP and other such templating languages already allow for this but I would argue not elegantly as React. Again existing React knowledge weighs heavy here so your mileage might vary.
 
 ## Getting Started
 
@@ -87,7 +87,7 @@ const listener = app.listen(9000, () => {
 });
 ```
 
-Now that the server.js file has been setup to find our view file, the next step is to create the views.
+Now that the `server.js` file has been setup to find our view file, the next step is to create the views.
 
 ```bash
 # -- terminal
@@ -134,4 +134,4 @@ With that the project can be started.
 node server.js
 ```
 
-The react component is rendered and the browser receives the html and css that is the output of that.
+The react component is rendered and the browser receives the html and CSS that is the output of that.

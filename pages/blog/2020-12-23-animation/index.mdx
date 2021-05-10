@@ -2,7 +2,7 @@ import Article from "../../../components/Article/Article";
 import RadarDemo from "./RadarDemo";
 
 export const description =
-    "A look at making some basic animations using vanilla js. Creating a radar animation demonstrates the basics.";
+    "A look at making some basic animations using vanilla JS. Creating a radar animation demonstrates the basics.";
 
 export const meta = {
     title: "Animation basics. Radar animation screen.",
@@ -19,7 +19,7 @@ It should be familiar from the movies.
 
 <RadarDemo />
 
-Start by drawing a canvas element with a fixed width and height. The rest is boilerplate code to accesss the js and css files.
+Start by drawing a canvas element with a fixed width and height. The rest is boilerplate code to access the JS and CSS files.
 
 ```html
 // index.html
@@ -74,6 +74,7 @@ The `arc` function is give by the `canvas context`.
 <a
     href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc"
     target="_blank"
+    rel="noopener"
 >
     developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc
 </a>
@@ -137,7 +138,7 @@ const getPointsOnCircle = ({ radius, angle, cx, cy }) => {
 };
 ```
 
-The resulting object is passed to the next function `drawRadarScanner`. A new path is started, move to the position of the center and draw a line to the newly calculated position. After that `window.requestAnimationFrame` ensures the process is repeated by calling the `draw` function which in turn executes `drawRadarScanner(getPointsOnCircle({ radius, angle, cx, cy }));`
+The resulting object is passed to the next function `drawRadarScanner`. A new path is started, move to the position of the centre and draw a line to the newly calculated position. After that `window.requestAnimationFrame` ensures the process is repeated by calling the `draw` function which in turn executes `drawRadarScanner(getPointsOnCircle({ radius, angle, cx, cy }));`
 
 ```javascript
 // index.js
@@ -152,7 +153,7 @@ const drawRadarScanner = ({ x, y, cx, cy }) => {
 };
 ```
 
-Here is the draw function which checks if the circle is complete. It also checks if the animation is actuall on.
+Here is the draw function which checks if the circle is complete. It also checks if the animation is actual on.
 
 ```javascript
 // index.js
@@ -193,4 +194,4 @@ const getPointsOnCircle = ({ radius, angle, cx, cy }) => {
 
 ---
 
-The source code can be found both on the demo link on <a href="https://ebony-shaded-duckling.glitch.me/" alt="demo on glith">glitch</a> and on <a href="https://github.com/Giwan/demo-radar" alt="project source code">github</a>.
+The source code can be found both on the demo link on <a href="https://ebony-shaded-duckling.glitch.me/" alt="demo on glith">glitch</a> and on <a href="https://github.com/Giwan/demo-radar" alt="project source code">GitHub</a>.

@@ -128,7 +128,7 @@ It has a `loadData` function which can be used on the server to pre-fetch the da
 
 If no route is matched, the `next()` function is called to just continue without data and SSR.
 
-When a route is matched though, the process for server side rendering is started. Part of this process is to check _if_ data is required. If yes, it's pre-loaded and passed down the chain.
+When a route is matched though, the process for server side rendering is started. Part of this process is to check *if* data is required. If yes, it's pre-loaded and passed down the chain.
 
 ```Javascript
 // server/controller/index.js
@@ -244,7 +244,7 @@ export default (store) => (req, res, next) => {
 
 `server/middleware/renderer.js` which is responsible for rendering receives a fully populated store. It finds the `public/index.html` file and opens it for modification.
 
-First the **newHTML** contents is generated with the `renderToString` function. By passing in `req.url` `react-router-dom` does it's thing to filter out only the components that match the current path the user entered. If the path is `https://mytoori.com/book/xyz` then the components `booksList` is ignored.
+First the **`newHTML`** contents is generated with the `renderToString` function. By passing in `req.url` `react-router-dom` does it's thing to filter out only the components that match the current path the user entered. If the path is `https://mytoori.com/book/xyz` then the components `booksList` is ignored.
 
 The book component is rendered and since we also used that path to pre-load the data, we know that the store has been populated. The data from the store is serialized (`JSON.stringify`) and added tot the window object. The whole package can then be sent to the client.
 
@@ -269,7 +269,7 @@ const reduxState = serialize(store.getState());
 
 ## Hydrating the client
 
-The client now receives the fully rendered HTML as it was intended. If the browser has javascript turned off the user will still be able to read all the contents. They won't however be able to interact with the page. For that to happen the client needs to be hydrated.
+The client now receives the fully rendered HTML as it was intended. If the browser has JavaScript turned off the user will still be able to read all the contents. They won't however be able to interact with the page. For that to happen the client needs to be hydrated.
 
 ```Javascript
 // src/index.js
@@ -300,7 +300,7 @@ root.hasChildNodes()
 
 ```
 
-First the data loaded on the server is pulled from the window object. It should also be deleted later as way of cleanup. It's then used to create a store object on the client. With that store now populated with the same data, the React App is rendered.
+First the data loaded on the server is pulled from the window object. It should also be deleted later as way of clean up. It's then used to create a store object on the client. With that store now populated with the same data, the React App is rendered.
 
 ```Javascript
 // src/index.js

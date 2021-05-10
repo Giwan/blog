@@ -39,7 +39,7 @@ There are 3 containers that will eventually be created.
 
 # docker-compose basic setup
 
-The following script creates the postgress database and django containers. Create `docker-compose.yml` and paste the following in.
+The following script creates the Postgress database and Django containers. Create `docker-compose.yml` and paste the following in.
 
 ```docker
 # docker-compose.yml
@@ -65,7 +65,7 @@ services:
 
 ## 1 Database Service: Postgress image
 
-A postgres image is downloaded from docker-hub and started. In production these values should be read from environment variables for better security.
+A Postgress image is downloaded from docker-hub and started. In production these values should be read from environment variables for better security.
 
 ## 2 Backend Service: Django docker file
 
@@ -93,22 +93,22 @@ psycopg2>=2.7,<3.0
 
 ## Create Django project
 
-Before running all the services in **docker-compose.yml** script, the web project has to have a first run to set it up correctly. Let's run only the **web** part of docker-compose.yml to do that.
+Before running all the services in **`docker-compose.yml`** script, the web project has to have a first run to set it up correctly. Let's run only the **web** part of docker-compose.yml to do that.
 
-docker-compose is used in the next command to run the web project. There the _command_ line is extended to start a new Django project with the name **composeexample**.
+docker-compose is used in the next command to run the web project. There the _command_ line is extended to start a new Django project with the name **`composeexample`**.
 
 ```shell
 # Actually create Django project
 sudo docker-compose run web django-admin startproject composeexample .
 ```
 
-You should now have a folder named **composeexample** and a file called **manage.py**.
+You should now have a folder named **`composeexample`** and a file called **`manage.py`**.
 
 ### Configure Postgres instead of SQLite
 
-Django needs to be made aware of the postgres database. Edit the connection settings in `composeexample/settings.py`.
+Django needs to be made aware of the Postgress database. Edit the connection settings in `composeexample/settings.py`.
 
-By default Django has a sqlite defined. Change the default to point to postgres instead. Find the **DATABASES** key and replace it with the following settings.
+By default Django has a SQLite defined. Change the default to point to Postgres instead. Find the **DATABASES** key and replace it with the following settings.
 
 ```shell
 # composeexample/settings.py
@@ -126,7 +126,7 @@ DATABASES = {
 
 NOTE: The key **Password** has been added here which is different from the Django quick start from https://docs.docker.com/compose/django/
 
-If this is not provided **psycopg2** is not able to connect to the database. There are probably other ways in providing this value.
+If this is not provided **`psycopg2`** is not able to connect to the database. There are probably other ways in providing this value.
 
 Now we can use docker-compose to start both, the database and web, containers.
 
@@ -143,7 +143,7 @@ The terminal mentions that the project is at 0.0.0.0:8000 but http://localhost:8
 This post is inspired by the information on https://docs.docker.com/compose/django/
 There a project is created with a `docker-compose.yml` file.
 The database is pulled from an image `image: postgres`
-The Django back-end is installed on a python3 image. The `requirements.txt` file allows for easy installation of the other components using `pip`.
+The Django back-end is installed on a Python3 image. The `requirements.txt` file allows for easy installation of the other components using `pip`.
 With that, docker-compose can be booted up.
 
 This will be slightly different in that an API is created and a front-end.
@@ -152,7 +152,7 @@ This will be slightly different in that an API is created and a front-end.
 
 ## Postgress username and password
 
-When first setting up the docker-compose project, Postgres is installed using a docker image. This image requires a username password correctly. Alternatively the environment variable `- POSTGRES_HOST_AUTH_METHOD=trust` can be specified. It tells postgres not to enforce a password requirement. This is not safe but can get your project up and running quickly, especially if this is only for demo / testing purposes.
+When first setting up the docker-compose project, Postgres is installed using a docker image. This image requires a username password correctly. Alternatively the environment variable `- POSTGRES_HOST_AUTH_METHOD=trust` can be specified. It tells Postgres not to enforce a password requirement. This is not safe but can get your project up and running quickly, especially if this is only for demo / testing purposes.
 
 ### Example docker-compose.yml file
 

@@ -1,0 +1,124 @@
+# markdown-spellcheck spelling configuration file
+# Format - lines beginning # are comments
+# global dictionary is at the start, file overrides afterwards
+# one word per line, to define a file override use ' - filename'
+# where filename is relative to this configuration file
+Giwan
+Persaud
+redux
+NextJS
+GatsbyJS
+ReactJS
+md5
+const
+VSCode
+HandlebarJS
+NodeJS
+Mytoori.com
+router.js
+Yandex
+backend
+non-dockerized
+popup
+webpack
+config
+respository
+BitBucket
+GitLab
+Netlify
+gitlab.com
+bitbucket.com
+netlify.com.
+walkthrough
+nameservers
+xpath
+i
+VueJS
+src
+bookTitle
+Vliegende
+JestJS
+Bitbucket
+README.md
+socket-io
+Django
+Postgres
+Vue
+Postgress
+yml
+SQLite
+Python3
+NoMergency
+pincode
+usecase
+samaritan's
+frontend
+centered
+serverless
+FaunaDB
+Netlify-cli
+movies
+WhatsApp
+GraphQL
+plugin
+loadData
+ItemsList
+ElectronJS
+package.json
+npm
+textarea
+dialog
+mdx
+ToolsList
+href
+RadarDemo
+_blank
+createdDate
+readTime
+GitHub.com
+resume.json
+untrustable
+ElectronJS.org
+noopener
+Routes.js
+rel
+mineable
+jsonresume
+freenom.com
+euh
+index.html
+popup.html
+webpack.config.js
+Btw
+Manifest.js
+Popup.js
+server.js
+renderer.js
+index.js
+sitemap.xml
+routes.js
+ - pages/blog/2020-10-18-loop-vs-function/index.mdx
+ helper1
+
+_
+ - pages/blog/2018-11-11-ssr-with-react/index.mdx
+url-loader
+serverRenderer
+div
+app.js
+childNodes
+ - pages/blog/2018-12-01-browser-extension-with-react/index.mdx
+64x64
+ - pages/blog/2021-01-23-next-js-blog/index.mdx
+Ibrahima
+Ndaw
+Rehype-prism
+rehype-prism
+Rehype
+ - pages/blog/2021-03-06-vue-js-solar/index.mdx
+vue-solar-system
+ - pages/blog/example/index.mdx
+createDate
+publishedDate
+ - pages/design.mdx
+DesignShots

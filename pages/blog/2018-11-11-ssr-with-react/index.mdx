@@ -39,7 +39,7 @@ There is not much here for a web crawler to work with. All the content of the ap
 
 ## Server side rendering
 
-With server side rendering (SSR), the Single Page Application is is first fully rendered on the server before it's sent to the client. All of the HTML content is sent in that first request just as it would be with a statically rendered site. The client can skip the javascript rendering step and simply "display" the received HTML to the user.
+With server side rendering (SSR), the Single Page Application is is first fully rendered on the server before it's sent to the client. All of the HTML content is sent in that first request just as it would be with a statically rendered site. The client can skip the JavaScript rendering step and simply "display" the received HTML to the user.
 
 ### Create the Server
 
@@ -54,7 +54,7 @@ Create a folder in the root of the project named `server`. It consists of three 
 
 This is the file that is initially loaded. It injects important dependencies and then starts the app.
 
-Server styles are ignored with the "ignore-styles" module. "url-loader" and "file-loader" are also part of the standard requirements. The dynamic import ensure that where ever `import` is used in the code it's replaced with `require`. Then the whole thing is pulled through Babel. Babel converts JSX to javascript.
+Server styles are ignored with the "ignore-styles" module. "url-loader" and "file-loader" are also part of the standard requirements. The dynamic import ensure that where ever `import` is used in the code it's replaced with `require`. Then the whole thing is pulled through Babel. Babel converts JSX to JavaScript.
 Install the packages.
 
 ```bash
@@ -273,11 +273,11 @@ export default initialRequest;
 
 ### Hydrating
 
-Now that the client, web-crawler or web-browser, has the html it needs, the javascript bundle, app.js, is also downloaded. Why?
+Now that the client, web-crawler or web-browser, has the html it needs, the JavaScript bundle, app.js, is also downloaded. Why?
 
 The SPA can be read but is not interactive. If the user were to click an element with an `onClick` event nothing would happen.
 
-Once the javascript bundle has been downloaded, the hydrating step can take place. Effectively this makes the server rendered application **interactive** for the end-user.
+Once the JavaScript bundle has been downloaded, the hydrating step can take place. Effectively this makes the server rendered application **interactive** for the end-user.
 
 ```javascript
 // --- index.js

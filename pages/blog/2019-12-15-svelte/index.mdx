@@ -12,7 +12,7 @@ export const meta = {
 
 export default ({ children }) => <Article meta={meta}>{children}</Article>;
 
-Svelte is a UI Framework, like ReactJS or ViewJS. However it takes a different approach by acting as a compiler. This means that unline react and view there is no react code or view code that needs to be present. Instead only the JS that is written by the developer is part of the application. Therefore less JS is sent to the browser.
+Svelte is a UI Framework, like ReactJS or VueJS. However it takes a different approach by acting as a compiler. This means that unlike react and view there is no react code or view code that needs to be present. Instead only the JS that is written by the developer is part of the application. Therefore less JS is sent to the browser.
 This article shows how a small app, created in Svelte, can be embedded into this very post.
 
 # Intro
@@ -46,7 +46,7 @@ It now shows "BOOK TITLE DE VLIEGENDE HOLLANDER".
 
 ## Styling
 
-Styling is part of the component as it's effectively an HTML component. In `App.svelte` move "Book Title" into a `label`. Under the styling for the h1, add the style for the label:
+Styling is part of the component as it's effectively an HTML component. In `App.svelte` move "Book Title" into a `label`. Under the styling for the H1, add the style for the label:
 
 ```html
 <style>
@@ -61,7 +61,7 @@ This applies separate styling for the label tag inside the H1 tag.
 
 ## image
 
-Replace the p tag witb an image tag to show the book cover.
+Replace the p tag with an image tag to show the book cover.
 
 ```html
 <img
@@ -80,7 +80,7 @@ With just this code, there is a warning in the editor that the ALT tag is missin
 
 # View Source
 
-Viewing the source (OPTION + CMD + u) at this point shows that there is a bundle file but it doesn't need to import any special rendering framework.
+Viewing the source (`OPTION + CMD + u`) at this point shows that there is a bundle file but it doesn't need to import any special rendering framework.
 Can this be embedded here?
 
 Before that, there is one thing that needs to be fixed. In `main.js` we see that the app is rendered on `document.body`.
@@ -108,7 +108,7 @@ In `public/index.html` insert a div into the body and give it the id "root".
 </body>
 ```
 
-In main.js replace `document.body` with `document.getElementById("root")`.
+In `main.js` replace `document.body` with `document.getElementById("root")`.
 
 ```javascript
 import App from "./App.svelte";

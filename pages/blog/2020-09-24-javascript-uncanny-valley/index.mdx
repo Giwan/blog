@@ -13,11 +13,11 @@ export const meta = {
 
 export default ({ children }) => <Article meta={meta}>{children}</Article>;
 
-With a large amount of Javascript, the client CPU, be it laptop or phone, will have to work hard to build the page. That build time is the **uncanny valley**.
+With a large amount of JavaScript, the client CPU, be it laptop or phone, will have to work hard to build the page. That build time is the **uncanny valley**.
 
 > Some real world applications send **thousands** of lines of JS (including data) to the browser.
 
-It's wasteful in many ways. There is unecessary network transfer and CPU processing. Obviously it's also very wastefull for your battery.
+It's wasteful in many ways. There is unnecessary network transfer and CPU processing. Obviously it's also very wasteful for your battery.
 From a UX perspective the user is also waiting much longer than necessary.
 
 # Rendering an SPA
@@ -35,13 +35,13 @@ There are several things one should do to address this issue:
 
 ## Keep the JS - and data files as small as possible
 
-The more JS there is to parse the longer it will take. The data provided will also add to this rendering time. Reducing the size of these and the amount of data required results in faster rendering and hydration timeframe.
+The more JS there is to parse the longer it will take. The data provided will also add to this rendering time. Reducing the size of these and the amount of data required results in faster rendering and hydration time frame.
 
 ## Use code splitting
 
 Suppose there is a component where the user can reset her password. That component is rarely used and perhaps not needed on first load. By splitting it out of our main bundle the overall size is reduced.
 
-Should the user click on it, it's dowloaded and made available. That download time does add to the overall wait time of the user. The tradeoff is still worth it though considering the infrequent use of this module.
+Should the user click on it, it's downloaded and made available. That download time does add to the overall wait time of the user. The trade-off is still worth it though considering the infrequent use of this module.
 
 ---
 

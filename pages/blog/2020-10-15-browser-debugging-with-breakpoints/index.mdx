@@ -13,7 +13,7 @@ export const meta = {
 
 export default ({ children }) => <Article meta={meta}>{children}</Article>;
 
-Breakpoints in the browser's devToolls are great, when they actually work. Normally Chrome does a pretty decent job. With create-react-app there seems to be an issue. The breakpoints catch sporadically. It seems the culprit is Hot Module Reloading.
+Breakpoints in the browser's dev tools are great, when they actually work. Normally Chrome does a pretty decent job. With create-react-app there seems to be an issue. The breakpoints catch sporadically. It seems the culprit is Hot Module Reloading.
 
 ---
 
@@ -33,9 +33,9 @@ https://www.mattbutton.com/2019/04/27/chrome-breakpoints-dont-work-when-using-cr
 
 Having tried it for a few days, the results are **disappointing**.
 
-### Github thread
+### GitHub thread
 
-There is an active thread on Github about this:
+There is an active thread on GitHub about this:
 https://github.com/facebook/create-react-app/issues/6074
 
 The problem, it seems is related to the way that Chrome handles **hot module reloading (HMR)**. Why this is not an issue in Firefox though?

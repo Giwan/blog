@@ -33,11 +33,11 @@ In the debug view click on the cog wheel in the top left to have VSCode automati
 | --------- | --------------------------------------------------------------------------------------------------------------- |
 | `name`    | _The name of the task shown next to the play button (top left)_                                                 |
 | `Type`    | _What type of process are you running. (**Node \| Chrome**)_                                                    |
-| `Request` | _Should it attach to an existing session or create a new one (**alt: attach**)_                                 |
-| `webRoot` | _Points to the source files or say the build files. I.e. `${workspaceFolder}/build` or `$rkspaceFolder} /dist`_ |
+| `Request` | _Should it attach to an existing session or create a new one_                                 |
+| `webRoot` | _Points to the source files or say the build files. I.e._ `${workspaceFolder}/build` or `${workspaceFolder}/dist` |
 
 Start the front-end from the terminal and leave it running. Press the play button in the debug menu. A new chrome session will be started.
-Set a breakpoint in vscode by clicking to the left of the line number. The breakpoint is indicated with a red dot.
+Set a breakpoint in VSCode by clicking to the left of the line number. The breakpoint is indicated with a red dot.
 Now run the front-end normally and the execution should stop at the breakpoint.
 
 ## Attaching to a running process
@@ -61,11 +61,11 @@ This does require chrome to be started with remote debugging enabled:
 Now that it's possible to set break points directly in the editor, it would be nice to have some more control. Conditional breakpoints provide a conditional, which if true, will trigger the breakpoint.
 
 Pro:
-Pause execution directly in vscode.
+Pause execution directly in VSCode.
 
 Con:
 The source maps need to be setup correctly or you might get confusing output
 
 # Resources
 
-[VSCode on github](https://github.com/Microsoft/vscode-chrome-debug)
+[VSCode on GitHub](https://github.com/Microsoft/vscode-chrome-debug)

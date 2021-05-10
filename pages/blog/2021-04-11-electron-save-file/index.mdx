@@ -15,22 +15,22 @@ export default ({ children }) => <Article meta={meta}>{children}</Article>;
 In [Electron Basics](https://blog.mytoori.com/blog/2021-04-11-electron-basics) a simple react based Electron project is created.
 In this follow-up article, content from the browser render process is sent to the main process where it can be saved.
 
-## Preload.js (For security)
+## `Preload.js` (For security)
 
 At the moment, the contents of the `.jsx` file only renders some basic text.
 The goal is to have a **save button** and a `textarea`.
 
 Saving to the user's computer is an action that the browser will not allow.
 It's has security implications.
-Tt's possible to disable. Don't do it though. 
+It's possible to disable. Don't do it though.
 It might expose the computer to security vulnerabilities.
 
-### Preload.js allows for secure communication
+### `Preload.js` allows for secure communication
 
-The renderer process instead send any data that needs to be saved to the main electron process. 
-This article focusses on sending text from the untrustable renderer process to the main process. 
-<a href="https://www.electronjs.org/docs/tutorial/security" target="_blank">The security concerns and mitigation strategies are well documented on electronjs.org</a>
+The renderer process instead send any data that needs to be saved to the main electron process.
+This article focusses on sending text from the untrustable renderer process to the main process.
 
+<a href="https://www.electronjs.org/docs/tutorial/security" target="_blank">The security concerns and mitigation strategies are well documented on <code>ElectronJS.org</code></a>
 
 Add a textarea and button to the `index.jsx` file.
 
@@ -53,14 +53,14 @@ const App = () => (
 render(<App />, document.getElementById("root"));
 ```
 
-The imported styling is optional and can be found in the git repository. 
+The imported styling is optional and can be found in the git repository.
 
 ### Saving
 
 Click the save button and the contents of the textarea should be sent to the main process.
-There the filesystem can be safely accessed to save the content. 
+There the filesystem can be safely accessed to save the content.
 
-Start by adding an onClick to the save button.
+Start by adding an `onClick` to the save button.
 
 ```jsx
 // index.jsx
@@ -149,9 +149,8 @@ contextBridge.exposeInMainWorld("electron", {
 ```
 
 The imported `ipcRenderer` fires off a message to the main process.
-There is no listener on the main process yet however though. 
-Let's add that next. 
-
+There is no listener on the main process yet however though.
+Let's add that next.
 
 Add this to the `/main.js` file.
 
@@ -187,13 +186,12 @@ app.whenReady().then(createWindow);
 Here `ipcMain` is imported from `electron`.
 With that component it's possible to listen for messages from the `ipcRenderer` that sent the "SAVE" message from `preload.js`.
 
-On line 177 the listener is added: 
-```js
+On line 177 the listener is added:
 
+```js
 ipcMain.on("SAVE", (e, text) => {
     console.log(`MAIN process: ${text}`);
 });
-
 ```
 
 Now that the message text is available in the main process the <a href="https://www.electronjs.org/docs/api/dialog" target="_blank">Dialog API</a> can be used to save the text to disk.

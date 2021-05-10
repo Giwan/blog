@@ -4,7 +4,7 @@ export const description =
     "Setup a simple demo login function to see serverless functions in action";
 
 export const meta = {
-    title: "Getting started with serverless functions on netlify",
+    title: "Getting started with serverless functions on Netlify",
     description,
     createdDate: "2020-10-06",
     published: "2020-10-06",
@@ -13,7 +13,7 @@ export const meta = {
 
 export default ({ children }) => <Article meta={meta}>{children}</Article>;
 
-Almost Without fail, the first reply when mentioning serverless functions, is that there _is_ a server. It's just not a server you need to maintain. And that can be a good thing.
+Almost Without fail, the first reply when mentioning serverless functions, is that there *is* a server. It's just not a server you need to maintain. And that can be a good thing.
 It allows for a **minimal backend infrastructure**. At it's most basic, handle a form submission for example. But, there are many more possibilities.
 
 ---
@@ -48,7 +48,7 @@ The `netlify-cli` makes it easy to use the serverless functions while developing
 brew install netlify-cli
 ```
 
-Login with the cli to connect it to the account created previously.
+Login with the CLI to connect it to the account created previously.
 
 ```bash
 netlify login
@@ -60,7 +60,7 @@ Create a new site with the following. The `--name` parameter is optional.
 netlify sites:create
 ```
 
-We now have a site entity for netlify and can start creating the front-end app.
+We now have a site entity for Netlify and can start creating the front-end app.
 My go to is **create-react-app**. Feel free to use a different framework if you're more comfortable with that.
 It shouldn't matter too much for the serverless functions.
 
@@ -83,7 +83,7 @@ netlify dev
 
 By default, port 8888 is used. Navigate to http://localhost:8888 in the browser to see the project running locally.
 
-## Cleanup default project files
+## Clean up default project files
 
 The project will just have a few buttons. These, in turn, trigger the serverless functions. Replace the contents of `App.js` with the following:
 
@@ -130,14 +130,14 @@ netlify functions:create --name login
 `[hello-world] Basic function that shows async/await usage, and response formatting`
 
 The codebase now has a `functions` folder with `login.js`.
-That `login.js` represents an API endpoint. Type CTRL-C to stop the development server and run netlify dev again. Now test it.
+That `login.js` represents an API endpoint. Type CTRL-C to stop the development server and run Netlify dev again. Now test it.
 
 ```bash
 # API call to serverless function
 curl http://localhost:8888/.netlify/functions/login/login.js
 ```
 
-`.netlify` in the target url signals to netlify that it should serve a serverless function. After that the function is in a folder path named **functions/login**.
+`.netlify` in the target URL signals to Netlify that it should serve a serverless function. After that the function is in a folder path named **functions/login**.
 
 With this template function the template returns "hello world"
 
@@ -251,13 +251,13 @@ curl --location --request GET 'http://localhost:8888/.netlify/functions/login/lo
 
 # Front-end using API end-point
 
-Fnow now the login button will call the end-point with the credentials. If HTTP 200 is received the front-end redirects to the /admin page.
+For now the login button will call the end-point with the credentials. If HTTP 200 is received the front-end redirects to the /admin page.
 
 ```bash
 npm i react-router react-router-dom
 ```
 
-Update `index.js` so there is support for react-router from the root. Wrapp `<App />` in `<BrowserRouter>`.
+Update `index.js` so there is support for react-router from the root. Wrap `<App />` in `<BrowserRouter>`.
 
 ```javascript
 // index.js

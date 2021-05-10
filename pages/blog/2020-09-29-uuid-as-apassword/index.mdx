@@ -69,17 +69,17 @@ These are sent to the server where validation takes place as described above. Fo
 
 > Two client devices therefore never generate the same five UUIDs.
 
-The end result is that the actual password leaving the client device and being sent over the network is an intermediate list. When using SSL to secure the conection this might seem redundant. It serves a higher purpose however.
+The end result is that the actual password leaving the client device and being sent over the network is an intermediate list. When using SSL to secure the connection this might seem redundant. It serves a higher purpose however.
 
 ### Brute forcing
 
 Let's say the attacker uses a rainbow table of 4 where one of the entries is "hello". Looping over the rainbow table, requires each word to be reconstructed using a new list of UUIDs for _every_ login request.
 Ultimate the password can still be found. It will however require significantly more effort on the part of the attacker.
 
-### Passwords from one comprimised site, pose less of a risk on other sites.
+### Passwords from one compromised site, pose less of a risk on other sites.
 
-If a user uses the password "hello" on site A. That password is sent over the wire as a list of UUIDs. Ultimately it's stored as a diffrent string.
-On site B, the user uses the same password. If site B is comprimised the password that is obtained can't be easily uses to compare with Site A.
+If a user uses the password "hello" on site A. That password is sent over the wire as a list of UUIDs. Ultimately it's stored as a different string.
+On site B, the user uses the same password. If site B is compromised the password that is obtained can't be easily uses to compare with Site A.
 
 When compared to just storing a salted password hash, this setup adds another layer of security.
 

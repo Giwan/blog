@@ -184,4 +184,10 @@ Todo:
 https://hackerspad.net/
 https://hackerspad.net/? 
 
+https://readme.com/documentation
+Great design. Some inspiration for mytoori.
+They also have good customers with nice designed websites. 
+Those are tools that I might want to list as well. 
+I also like how many of these sites then list other sites that are of interest. 
+
 */

@@ -4,7 +4,7 @@ export const description =
     "Deploy and test the project directly from the remote server.";
 
 export const meta = {
-    title: "Deploy a React SPA with serverless functions to netlify",
+    title: "Deploy a React SPA with serverless functions to Netlify",
     description,
     createdDate: "2020-10-08",
     published: "2020-10-08",
@@ -13,15 +13,15 @@ export const meta = {
 
 export default ({ children }) => <Article meta={meta}>{children}</Article>;
 
-In the previous post, a simple serverless function was created with a basic front-end project. In this article it will be deployed to netlify.
+In the previous post, a simple serverless function was created with a basic front-end project. In this article it will be deployed to Netlify.
 
-The code repository on github https://github.com/Giwan/react-serverless
+The code repository on GitHub https://github.com/Giwan/react-serverless
 
 Login to your account website on netlify.com. You should see the project that was created in the previous article. https://blog.mytoori.com/serverless-functions-on-netlify
 
 It is, however, not deployed yet.
 
-# Deploy to netlify
+# Deploy to Netlify
 
 Since the project works locally, run the following to deploy it.
 
@@ -34,14 +34,14 @@ The CLI checks if the current directory is already linked to an existing site if
 
 Afterwards it's also necessary to indicate which folder contains the compiled code. Since we're in a create-react-app application this should be a `build` directory.
 
-The directory might not exist yet but as soon as you run `npm run build` it will be created. Now run `netlify deploy --prod` again to actuallly deploy.
+The directory might not exist yet but as soon as you run `npm run build` it will be created. Now run `netlify deploy --prod` again to actually deploy.
 
 ## /admin doesn't work
 
-Your app has a url that ends `.netlify.app`. In my case for example:
+Your app has a URL that ends `.netlify.app`. In my case for example:
 `https://wizardly-noether-9006a1.netlify.app`
 
-Navigate to https://wizardly-noether-9006a1.netlify.app/admin and there is an error however. This is because `/admin` is supposed to be handled on the **client**. The server recieves it however. It looks for `/admin/index.html` on the server but doesn't find it.
+Navigate to https://wizardly-noether-9006a1.netlify.app/admin and there is an error however. This is because `/admin` is supposed to be handled on the **client**. The server receives it however. It looks for `/admin/index.html` on the server but doesn't find it.
 
 The client router **does** know how to handle this request. So the server merely needs configuration to point back to the client.
 

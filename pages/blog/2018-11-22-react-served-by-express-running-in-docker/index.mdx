@@ -88,9 +88,9 @@ class App extends React.Component {
 render(<App />, document.getElementById("root"));
 ```
 
-The above code uses the endpoint `/api/data` to get the data it needs. If the front-end is running on `http://localhost:3000`, then the api request will got to `http://localhost:3000/api/data`. (Providing there is no proxy configured).
+The above code uses the endpoint `/api/data` to get the data it needs. If the front-end is running on `http://localhost:3000`, then the API request will got to `http://localhost:3000/api/data`. (Providing there is no proxy configured).
 
-In our case we would like the api request to go to a different host. The challenging part is that we do not know which host this is until later (at runtime).
+In our case we would like the API request to go to a different host. The challenging part is that we do not know which host this is until later (at runtime).
 
 In the case of a non-dockerized React application, use the environment variables available at build time. These start with `REACT_APP_`. https://create-react-app.dev/docs/adding-custom-environment-variables/
 
@@ -157,7 +157,7 @@ In the case the docker image should be re-used for for TST on ACC and, PRD.
 Once the Docker image is built `docker build`, it's not easy to inject variable values.
 
 Running in docker, the front-end uses a server.
-That server, A node / express server, can be used to provide the **apiHost** to the front-end.
+That server, A node / express server, can be used to provide the **`apiHost`** to the front-end.
 
 1. Starting the Docker container, environment variables are provided at run time
 2. The container receives and passes the environment variables on to the express server
@@ -171,7 +171,7 @@ docker run -e "API_HOST=https://mydockerdynamichost.com" -p 3000:3000 mydockerim
 
 ```
 
-[The complete source on github](https://github.com/Giwan/fe-docker-dynamic-be)
+[The complete source on GitHub](https://github.com/Giwan/fe-docker-dynamic-be)
 
 ## Slow data retrieval
 
@@ -187,7 +187,7 @@ It's also sent to the client.
 The API HOST variable is provided right away. The need for an additional network request is removed.
 Initial data should also be loaded before responding to the client.
 
-First ensure the app expects the apiHost as a prop.
+First ensure the app expects the `apiHost` as a prop.
 
 ```javascript
 // -- src/app.js
@@ -200,7 +200,7 @@ class App extends Component {
         return (
             <div className="App">
                 <h1>Sample app testing dynamic backend</h1>
-                <div>Loaded backend host: {this.props.apiHost} </div>
+                <div>Loaded backend host: {this.props.`apiHost`} </div>
             </div>
         );
     }
@@ -211,7 +211,7 @@ export default App;
 
 [source: app.js](https://github.com/Giwan/fe-docker-dynamic-be/blob/ssr/src/App.js)
 
-Also during Hydration is the apiHost required. During the render step on the server it will become clear why the variable `__API_HOST__` is a global on the window object.
+Also during Hydration is the `apiHost` required. During the render step on the server it will become clear why the variable `__API_HOST__` is a global on the window object.
 
 ```javascript
 // -- src/index.js
@@ -438,7 +438,7 @@ The start:prod command initiates the node process with the server/server.js file
 
 To test outside of Docker, simply run `npm run start:prod` from the terminal.
 
-While running the docker container the api host is provided as an environment variable. That is then read when rendering the app on the server.
+While running the docker container the API host is provided as an environment variable. That is then read when rendering the app on the server.
 
 ```bash
 # build docker

@@ -83,9 +83,9 @@ With it a new window is created with a the given sizes.
 
 the `webPreferences` object is important for security.
 Exposure is limited by setting `contextIsolation` to `true`.
-The `preload` file helps to channel information between the **insecure** browserWindow and the electron app that has access to NodeJS.
+The `preload` file helps to channel information between the **insecure** browser window and the electron app that has access to NodeJS.
 
-To avoid a reference errror, create the `preload.js` file with `touch preload.js`.
+To avoid a reference error, create the `preload.js` file with `touch preload.js`.
 For the moment it does not need any content.
 
 Also create a basic `index.html` file and add the following.
@@ -105,7 +105,7 @@ Also create a basic `index.html` file and add the following.
 </html>
 ```
 
-This is the content that will be rendered in the newly created browserWindow.
+This is the content that will be rendered in the newly created `browserWindow`.
 
 Add this `start` script to the `package.json` file.
 `start: "electron ."`
@@ -189,7 +189,7 @@ npm i --save-dev react react-dom
 ### Build script
 
 Add a new entry to `package.json` `scripts` object.
-The snowpack build command builds the react files allowing electron to access them as regular javascript.
+The snowpack build command builds the react files allowing electron to access them as regular JavaScript.
 The following are a few script commands to facilitate building in different environments.
 
 ```json
@@ -245,7 +245,7 @@ function createWindow() {
 app.whenReady().then(createWindow);
 ```
 
-The process is checked NODE_ENV. In **production** the final build/index.html can be loaded.
+The process is checked `NODE_ENV`. In **production** the final `build/index.html` can be loaded.
 Any other mode reads from the local development server.
 
 Start the electron application with `npm start`
