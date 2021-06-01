@@ -11,9 +11,16 @@ const {
     writing,
     markdown,
     inspiration,
+    notes
 } = labels;
 
 export const designPages = [
+    {
+        url: "https://bundlednotes.com/",
+        imgName: "/v1622567513/landing_pages/bundlednotes.com.png",
+        labels: [productivity, markdown, notes],
+        description: "A notes application to replace Google Keep",
+    },
     {
         url: "https://opensubscriptionplatforms.com",
         imgName: "/v1615927266/landing_pages/opensubscriptionplatforms.com.png",

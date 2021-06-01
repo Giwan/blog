@@ -7,12 +7,28 @@
 .designImage {
     width: 75%;
     border: 1px solid var(--color-primary-dark);
+    transition: border-color 0.5s;
+    position: relative;
+    display: inline-block;
 }
 
-.designPage img {
-    transition: transform 0.5s;
+.designPage a {
+    position: relative;
 }
 
-.designPage img:hover {
-    transform: scale(1.25);
+.designPage a::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 75%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: var(--color-accent);
+    transition: height 0.3s;
+}
+
+.designPage a:hover::after {
+    border-color: var(--color-accent);
+    height: var(--unit);
 }
