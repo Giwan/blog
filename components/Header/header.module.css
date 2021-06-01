@@ -24,11 +24,17 @@
     transform: scale(0.95);
 }
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
     .headerLogo {
         position: relative;
         width: 50%;
         min-width: 50px;
         top: -30%;
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        font-size: .75em;
     }
 }

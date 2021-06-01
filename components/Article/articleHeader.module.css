@@ -41,6 +41,11 @@
     font-family: var(--font-family-text-2);
     font-size: var(--font-size-small);
     opacity: 0.85;
+    transition: opacity 0.5s;
+}
+
+.articleItem:hover .articleHeaderSummary p {
+    opacity: 1;
 }
 
 .articleHeaderMetaDetails {
@@ -54,4 +59,19 @@
     font-size: var(--font-size-small-x);
     text-transform: uppercase;
     opacity: 0.45;
+}
+
+.readButton {
+    border: 1px solid var(--color-primary-dark);
+    text-transform: uppercase;
+    font-size: var(--font-size-small-x);
+    border-radius: calc(var(--unit) / 6);
+    background-color: transparent;
+    opacity: 0.45;
+    transition: background-color 0.5s, opacity 0.5s;
+}
+
+.articleItem:hover .readButton {
+    background-color: var(--color-accent);
+    opacity: 1;
 }

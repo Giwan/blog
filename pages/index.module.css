@@ -1,5 +1,5 @@
 .articleListContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(calc(300px - (var(--unit) *2), 1fr)));
     gap: calc(var(--unit) * 2);
 }

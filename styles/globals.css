@@ -71,6 +71,7 @@ p code {
     color: var(--color-accent);
     font-size: var(--font-size-small);
     border-radius: var(--unit);
+    word-break: break-word;
 }
 
 blockquote p {
@@ -86,5 +87,9 @@ blockquote p {
 @media (max-width: 320px) {
     body {
         font-size: var(--font-size-small);
+    }
+
+    p code {
+        font-size: var(--font-size-small-x);
     }
 }

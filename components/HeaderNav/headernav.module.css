@@ -10,7 +10,7 @@
     font-size: var(--font-size-small);
 }
 
-@media (max-width: 414px) {
+@media (max-width: 500px) {
     .headerNav ul li {
         font-size: 0.85em;
     }

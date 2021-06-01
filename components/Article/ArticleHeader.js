@@ -6,7 +6,7 @@
  * The description for example is not required
  * on the detail page
  */
-import styles from "./articleHeader.module.css";
+import styles, { readButton } from "./articleHeader.module.css";
 
 const dateOptions = {
     year: "numeric",
@@ -30,14 +30,14 @@ const ArticleHeader = ({ meta, isBlogPost }) => {
                 )}
             </header>
             <div className={styles.articleHeaderMetaDetails}>
-            <span>{meta.readTime + " minutes"}</span>
+                <span>{meta.readTime + " minutes"}</span>
                 <span>
                     {new Date(meta.published).toLocaleDateString(
                         "en-GB",
                         dateOptionsFiltered
                     )}
                 </span>
-                
+                {!isBlogPost && <button className={readButton}>read</button>}
             </div>
             <div className={styles.articleHeaderSummary}>
                 {isBlogPost ? null : <p>{meta.description}</p>}
