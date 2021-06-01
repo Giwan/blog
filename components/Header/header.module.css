@@ -6,7 +6,8 @@
     display: grid;
     grid-template-columns: 1fr minmax(200px, 2fr);
     align-items: center;
-    background-color: var(--color-primary-light);
+    /* background-color: var(--color-primary-light); */
+    background-color: transparent;
 }
 
 .headerLogo {

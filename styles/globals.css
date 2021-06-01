@@ -1,5 +1,8 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+ */
+ /* This import is probably less performant */
+ @import url('https://fonts.googleapis.com/css2?family=Anton&family=Dela+Gothic+One&family=Fjalla+One&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Squada+One&display=swap');
 
 :root {
     --unit: 16px;
@@ -11,17 +14,23 @@
     --font-size-large-x: 32px;
     --font-size-large-xx: 48px;
     /* colors */
-    --color-primary-dark: #031026;
+    --color-primary: #031026;
+    --color-primary-dark: #130d07bd;
+    /* --color-primary-dark: #4a4a4a; */
     /* --color-primary-dark: #222222; */
     --color-primary-light: #fefefe;
     --color-secondary-light: #aaa;
+    --color-primary-background: #fff1e5; /*  #f15a5a; */
     --color-secondary-background: #efefef;
     --color-accent: #a6e22e;
+
+    --color-text-1: #130d07bd;
 
     /* fonts */
     /* --font-family-header: Helvetica, sans-serif; */
     --font-family-header: Helvetica, sans-serif;
-    --font-family-text-2: Georgia, serif;
+    --font-family-header-2: "Fjalla One", Helvetica, sans-serif;
+    --font-family-text-2: Merriweather, Georgia, serif;
 }
 
 html,
@@ -33,7 +42,8 @@ body {
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 
     font-family: var(--font-family-text-2);
-    background-color: var(--color-primary-light);
+    /* background-color: var(--color-primary-light); */
+    background-color: var(--color-primary-background);
 }
 
 a {
@@ -58,11 +68,11 @@ p {
 }
 
 p code {
-    background-color: var(--color-secondary-background);
-    padding: calc(var(--unit) / 4) var(--unit);
-    color: var(--color-primary-dark);
+    background-color: var(--color-primary);
+    padding: calc(var(--unit) / 6) var(--unit);
+    color: var(--color-accent);
     font-size: var(--font-size-small);
-    border-radius: 2px;
+    border-radius: var(--unit);
 }
 
 blockquote p {

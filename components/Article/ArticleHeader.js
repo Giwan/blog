@@ -30,13 +30,14 @@ const ArticleHeader = ({ meta, isBlogPost }) => {
                 )}
             </header>
             <div className={styles.articleHeaderMetaDetails}>
+            <span>{meta.readTime + " minutes"}</span>
                 <span>
                     {new Date(meta.published).toLocaleDateString(
                         "en-GB",
                         dateOptionsFiltered
                     )}
                 </span>
-                <span>{meta.readTime + " minutes"}</span>
+                
             </div>
             <div className={styles.articleHeaderSummary}>
                 {isBlogPost ? null : <p>{meta.description}</p>}

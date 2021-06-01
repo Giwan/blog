@@ -8,7 +8,7 @@
     font-size: var(--font-size-small);
     font-family: var(--font-family-text-2);
     opacity: 0.8;
-    transition: opacity 0.1s;
+    /* transition: opacity 0.25s; */
 }
 
 .toolsItem:hover {
@@ -18,6 +18,7 @@
 .toolsItemTitle {
     font-family: var(--font-family-text-2);
     font-size: var(--font-size-large);
+    color: var(--color-primary);
 }
 
 .toolsItem a {
@@ -29,6 +30,12 @@
     color: var(--color-accent);
     margin-left: calc(var(--unit) / 2);
     display: inline-block;
+    line-height: 0;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.toolsItem:hover h2::after {
+    opacity: 1;
 }
 
 .toolsItem:hover h2 {
@@ -37,19 +44,20 @@
 
 .toolDescription {
     font-family: var(--font-family-text-2);
-    line-height: 1.5em;
+    line-height: 1.45em;
 }
 
 /* Some tool items are importing an mdx description */
 .toolDescription p {
-    line-height: 1.5em;
+    line-height: 1.45em;
 }
 
 .toolsItem footer label {
     display: inline-block;
-    margin: calc(var(--unit) / 2) var(--unit) 0 0;
-    padding: calc(var(--unit) / 4) calc(var(--unit) / 2);
-    background-color: var(--color-secondary-background);
+    margin: calc(var(--unit) / 4) var(--unit) 0 0;
+    /* padding: calc(var(--unit) / 4) 0; */
+    /* background-color: var(--color-secondary-background); */
     font-size: var(--font-size-small-x);
     font-family: var(--font-family-header);
+    opacity: 0.5;
 }

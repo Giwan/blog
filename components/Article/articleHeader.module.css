@@ -12,10 +12,9 @@
     line-height: 1.2em;
     color: var(--color-primary);
     margin: 0;
-    font-size: var(--font-size-large-x);
-    font-family: var(--font-family-text-2);
+    font-size: var(--font-size-large);
+    font-family: var(--font-family-header-2);
     font-weight: 700;
-    opacity: 0.8;
 }
 
 /* The header shown when in the article
@@ -26,13 +25,14 @@
     font-size: var(--font-size-large-xx);
     font-weight: 700;
     margin-bottom: 0;
+    font-family: var(--font-family-header-2);
 }
 
 .articleHeaderSummary {
     margin-bottom: var(--unit);
     font-size: var(--font-size-default);
-    opacity: 0.75;
     margin-top: calc(var(--unit) / 2);
+    color: var(--color-text-1);
 }
 
 .articleHeaderSummary p {
@@ -40,15 +40,18 @@
     margin: 0;
     font-family: var(--font-family-text-2);
     font-size: var(--font-size-small);
+    opacity: 0.85;
 }
 
 .articleHeaderMetaDetails {
     margin-top: calc(var(--unit) / 2);
-    color: var(--color-secondary-light);
-    font-size: var(--font-size-small);
+    color: var(--color-text-1);
+    font-size: var(--font-size-small-x);
 }
 
 .articleHeaderMetaDetails span {
     margin-right: var(--unit);
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-small-x);
+    text-transform: uppercase;
+    opacity: 0.45;
 }
