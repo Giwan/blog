@@ -1,8 +1,6 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
- */
+
  /* This import is probably less performant */
- @import url('https://fonts.googleapis.com/css2?family=Anton&family=Dela+Gothic+One&family=Fjalla+One&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Squada+One&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
     --unit: 16px;
@@ -29,7 +27,7 @@
     /* fonts */
     /* --font-family-header: Helvetica, sans-serif; */
     --font-family-header: Helvetica, sans-serif;
-    --font-family-header-2: "Fjalla One", Helvetica, sans-serif;
+    --font-family-header-2: "Merriweather sans", Helvetica, sans-serif;
     --font-family-text-2: Merriweather, Georgia, serif;
 }
 
