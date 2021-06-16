@@ -1,6 +1,6 @@
 import ArticleItem from "../components/ArticleItem/ArticleItem";
 import { posts } from "../getAllPosts";
-import styles from "./index.module.css";
+import { articleListContainer } from "./index.module.css";
 import { getDateNumber } from "../utils/helpers";
 
 export const sortPostsByDate = (p1, p2) => {
@@ -21,7 +21,7 @@ export const publishedPosts = (posts = []) => {
 
 export default function IndexPage() {
     return (
-        <div className={styles.articleListContainer}>
+        <div className={articleListContainer}>
             {publishedPosts(posts).map((post) => (
                 <ArticleItem key={post.link} post={post} />
             ))}
