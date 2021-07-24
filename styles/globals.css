@@ -1,6 +1,7 @@
 
  /* This import is probably less performant */
- @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+ /* @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap'); */
+ @import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap');
 
 :root {
     --unit: 16px;
@@ -18,7 +19,7 @@
     /* --color-primary-dark: #222222; */
     --color-primary-light: #fefefe;
     --color-secondary-light: #aaa;
-    --color-primary-background: #fff; /*  #f15a5a; */
+    --color-primary-background: #FBFBFB; /*  #f15a5a; */
     --color-secondary-background: #efefef;
     --color-accent: #a6e22e;
 
@@ -27,8 +28,8 @@
     /* fonts */
     /* --font-family-header: Helvetica, sans-serif; */
     --font-family-header: Helvetica, sans-serif;
-    --font-family-header-2: "Merriweather sans", Helvetica, sans-serif;
-    --font-family-text-2: Merriweather, Georgia, serif;
+    --font-family-header-2: Lora, Helvetica, sans-serif;
+    --font-family-text-2: Lora, Georgia, serif;
 }
 
 html,

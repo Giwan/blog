@@ -37,7 +37,22 @@ const ArticleHeader = ({ meta, isBlogPost }) => {
                         dateOptionsFiltered
                     )}
                 </span>
-                {!isBlogPost && <button className={readButton}>read</button>}
+                {!isBlogPost && (
+                    <button className={readButton}>
+                        <svg
+                            width="8"
+                            height="12"
+                            viewBox="0 0 8 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M1.41 0L0 1.41L4.58 6L0 10.59L1.41 12L7.41 6L1.41 0Z"
+                                fill="#828282"
+                            />
+                        </svg>
+                    </button>
+                )}
             </div>
             <div className={styles.articleHeaderSummary}>
                 {isBlogPost ? null : <p>{meta.description}</p>}
