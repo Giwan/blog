@@ -1,4 +1,11 @@
+.layoutContainer {
+    display: grid;
+    grid-template-rows: calc(var(--unit) * 5) 2fr auto;
+    min-height: 100vh;
+}
+
 .mainContent {
     padding: 0 calc(var(--unit) * 2);
     padding-top: calc(var(--unit) * 4);
+    height: 100%;
 }

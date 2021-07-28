@@ -1,0 +1,15 @@
+.button {
+    border: none;
+    background-color: var(--color-primary);
+    margin-right: var(--unit);
+    color: var(--color-primary-light);
+    padding: 0 calc(var(--unit) /2);
+    font-family: var(--font-family-meta);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button[data-active="true"] {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}

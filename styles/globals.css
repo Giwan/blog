@@ -1,7 +1,8 @@
 
  /* This import is probably less performant */
  /* @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap'); */
- @import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap');
+ /* @import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap'); */
+ @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Oswald&display=swap');
 
 :root {
     --unit: 16px;
@@ -24,12 +25,14 @@
     --color-accent: #a6e22e;
 
     --color-text-1: #130d07bd;
+    --color-text-light: #828282;
 
     /* fonts */
     /* --font-family-header: Helvetica, sans-serif; */
     --font-family-header: Helvetica, sans-serif;
     --font-family-header-2: Lora, Helvetica, sans-serif;
     --font-family-text-2: Lora, Georgia, serif;
+    --font-family-meta: Oswald, Helvetica, sans-serif;
 }
 
 html,

@@ -1,3 +1,8 @@
+import filteredList from "./helpers/filteredList";
+
+export { filteredList };
+
+
 export const reverseDate = (date = "") =>
     parseInt(date.split("-").reverse().join(""));
 

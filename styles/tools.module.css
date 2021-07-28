@@ -1,6 +1,6 @@
 .toolsList {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, 200px);
     gap: calc(var(--unit) * 2);
 }
 
@@ -16,7 +16,7 @@
 }
 
 .toolsItemTitle {
-    font-family: var(--font-family-text-2);
+    font-family: var(--font-family-header);
     font-size: var(--font-size-large);
     color: var(--color-primary);
 }
@@ -44,12 +44,17 @@
 
 .toolDescription {
     font-family: var(--font-family-text-2);
-    line-height: 1.45em;
+    line-height: 1.5em;
+    font-size: var(--font-size-small);
 }
 
 /* Some tool items are importing an mdx description */
 .toolDescription p {
     line-height: 1.45em;
+}
+
+.toolsItemFooter {
+    margin: var(--unit) 0;
 }
 
 .toolsItem footer label {
@@ -58,6 +63,7 @@
     /* padding: calc(var(--unit) / 4) 0; */
     /* background-color: var(--color-secondary-background); */
     font-size: var(--font-size-small-x);
-    font-family: var(--font-family-header);
-    opacity: 0.5;
+    font-family: var(--font-family-meta);
+    text-decoration: underline;
+    color: var(--color-text-light);
 }
