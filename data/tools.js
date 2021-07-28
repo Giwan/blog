@@ -9,6 +9,8 @@ import Txtfiddle from "./toolsData/txtfiddle.mdx";
 import Codepen from "./toolsData/codepen.mdx";
 import Codesandbox from "./toolsData/codesandbox.mdx";
 import WeTransfer from "./toolsData/wetransfer.mdx";
+import HackersPad from "./toolsData/hackerspad.mdx";
+import Etherpad from "./toolsData/etherpad.mdx";
 
 const tools = [
     {
@@ -171,6 +173,22 @@ const tools = [
         price: 0,
         category: categories.DATA_MANAGEMENT,
         labels: [labels.productivity, labels.email], 
+    },
+    {
+        title: "hackerspad.net",
+        url: "https://hackerspad.net/",
+        description: <HackersPad />,
+        price: 0,
+        category: categories.SOFTWARE,
+        labels: [labels.productivity, labels.project], 
+    },
+    {
+        title: "etherpad.org",
+        url: "https://etherpad.org/",
+        description: <Etherpad />,
+        price: 0,
+        category: categories.WRITING,
+        labels: [labels.productivity, labels.writing, labels.notes], 
     },
 
 ];

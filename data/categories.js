@@ -9,5 +9,6 @@ export default Object.freeze({
     DEVELOPER: "Developer",
     WIREFRAME: "wireframe",
     PRODUCTIVITY: "productivity",
-    DATA_MANAGEMENT: "Data Management"
+    DATA_MANAGEMENT: "Data Management",
+    SOFTWARE: "software"
 });
