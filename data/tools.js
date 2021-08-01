@@ -1,8 +1,6 @@
 import categories from "./categories";
 import labels from "./labels";
 import Cloudinary from "./toolsData/cloudinary.mdx";
-import Autodraw from "./toolsData/autodraw.mdx";
-import Framer from "./toolsData/framer.com.mdx";
 import DrawIO from "./toolsData/draw.io.mdx";
 import Ghost from "./toolsData/ghost.org.mdx";
 import Txtfiddle from "./toolsData/txtfiddle.mdx";
@@ -11,16 +9,12 @@ import Codesandbox from "./toolsData/codesandbox.mdx";
 import WeTransfer from "./toolsData/wetransfer.mdx";
 import HackersPad from "./toolsData/hackerspad.mdx";
 import Etherpad from "./toolsData/etherpad.mdx";
+import readingTools from "./readingTools";
+import designTools from "./designTools";
 
 const tools = [
-    {
-        title: "Figma",
-        url: "https://figma.com",
-        description:
-            "App great design tool. It's easy to use and especially get started. No installation required for example. Simply fireup your web browser and signup and get started.",
-        category: categories.DESIGN,
-        labels: [labels.design, labels.productivity],
-    },
+    ...readingTools,
+    ...designTools,
     {
         title: "Trello",
         url: "https://trello.com",
@@ -49,15 +43,6 @@ const tools = [
         labels: [labels.productivity, labels.writing, labels.markdown],
     },
     {
-        title: "Pocket",
-        url: "https://app.getpocket.com/",
-        description:
-            "Use pocket to save your articles and read them later. One of the best things is the feature for reading a given article.",
-        price: 0,
-        category: categories.READING,
-        labels: [labels.reading, labels.productivity, labels.education],
-    },
-    {
         title: "Mibo",
         url: "https://getmibo.com/",
         description:
@@ -78,29 +63,10 @@ const tools = [
     {
         title: "Miro",
         url: "https://miro.com/",
-        description: "The online collaborative whiteboard platform",
+        description: "The online collaborative whiteboard platform. Plan projects, create boards and use various media types.",
         price: 0,
         category: categories.DEVELOPER,
         labels: [labels.productivity, labels.engineering],
-    },
-    {
-        title: "Dribbble",
-        url: "https://dribbble.com/",
-        description: `UI and UX social plaform. 
-        It's great to browse through the designs from others. 
-        It motivates and inspires `,
-        price: 0,
-        category: categories.DESIGN,
-        labels: [labels.productivity, labels.design],
-    },
-    {
-        title: "Behance",
-        url: "https://www.behance.net/",
-        description: `UI and UX plaform. 
-        Teams can easily share their projects making it easy to see the contributions from everyone`,
-        price: 0,
-        category: categories.DESIGN,
-        labels: [labels.productivity, labels.design],
     },
     {
         title: "Cloudinary",
@@ -110,22 +76,7 @@ const tools = [
         category: categories.DEVELOPER,
         labels: [labels.productivity, labels.image],
     },
-    {
-        title: "AutoDraw",
-        url: "https://autodraw.com/",
-        description: <Autodraw />,
-        price: 0,
-        category: categories.DESIGN,
-        labels: [labels.productivity, labels.design],
-    },
-    {
-        title: "Framer",
-        url: "https://www.framer.com",
-        description: <Framer />,
-        price: 0,
-        category: categories.DESIGN,
-        labels: [labels.productivity, labels.design, labels.prototype],
-    },
+
     {
         title: "Draw.io",
         url: "https://app.diagrams.net/",
@@ -148,7 +99,7 @@ const tools = [
         description: <Txtfiddle />,
         price: 0,
         category: categories.WRITING,
-        labels: [labels.productivity, labels.writing],  
+        labels: [labels.productivity, labels.writing],
     },
     {
         title: "codepen",
@@ -156,7 +107,7 @@ const tools = [
         description: <Codepen />,
         price: 0,
         category: categories.DEVELOPER,
-        labels: [labels.productivity, labels.engineering], 
+        labels: [labels.productivity, labels.engineering],
     },
     {
         title: "codesandbox",
@@ -164,7 +115,7 @@ const tools = [
         description: <Codesandbox />,
         price: 0,
         category: categories.DEVELOPER,
-        labels: [labels.productivity, labels.engineering], 
+        labels: [labels.productivity, labels.engineering],
     },
     {
         title: "weTransfer",
@@ -172,7 +123,7 @@ const tools = [
         description: <WeTransfer />,
         price: 0,
         category: categories.DATA_MANAGEMENT,
-        labels: [labels.productivity, labels.email], 
+        labels: [labels.productivity, labels.email],
     },
     {
         title: "hackerspad",
@@ -180,7 +131,7 @@ const tools = [
         description: <HackersPad />,
         price: 0,
         category: categories.SOFTWARE,
-        labels: [labels.productivity, labels.project], 
+        labels: [labels.productivity, labels.project],
     },
     {
         title: "etherpad",
@@ -188,9 +139,8 @@ const tools = [
         description: <Etherpad />,
         price: 0,
         category: categories.WRITING,
-        labels: [labels.productivity, labels.writing, labels.notes], 
+        labels: [labels.productivity, labels.writing, labels.notes],
     },
-
 ];
 
 export default tools;

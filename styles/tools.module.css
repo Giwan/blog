@@ -7,7 +7,6 @@
 .toolsItem {
     font-size: var(--font-size-small);
     font-family: var(--font-family-text-2);
-    opacity: 0.8;
     height: 100%;
     margin-top: var(--unit);
     box-sizing: border-box;
@@ -68,6 +67,7 @@
     font-size: var(--font-size-small-x);
     font-family: var(--font-family-meta);
     color: var(--color-text-light);
+    text-transform: uppercase;
 }
 
 .categoryStyle {
