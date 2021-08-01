@@ -8,9 +8,8 @@ import { button } from "./FilterTools.module.css";
  * @param {*} param0
  * @returns
  */
-const FilterTools = function ({ setFilter, filters, setCategory, category }) {
+const FilterTools = function ({ setCategory, category }) {
     const handleClick = function (e) {
-        // setFilter([e.currentTarget.value]);
         setCategory(e.currentTarget.value);
     };
 

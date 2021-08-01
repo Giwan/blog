@@ -9,12 +9,21 @@ describe("filtered list ", () => {
         expect(filteredList(["design"], ["design"])).toEqual([]);
     });
     it("should return the parent object if the label was found", () => {
-        const tools = [{ labels: ["design"] }];
-        expect(filteredList(tools, ["design"])).toEqual(tools);
-        tools.push({labels: ["writing"]});
-        expect(filteredList(tools, ["design"])).toEqual([tools[0]]);
-        tools.push({labels: ["productivity"]});
-        expect(filteredList(tools, ["design", "writing"])).toEqual([tools[0], tools[1]]);
-        expect(filteredList(tools, ["design", "writing"])).not.toContain(tools[2]);
+        let tools = [{}];
+        expect(filteredList(tools)).toEqual(tools);
+        expect(filteredList(tools, "design")).toEqual([]);
+
+        tools = [
+            {
+                category: "design",
+            },
+        ];
+        expect(filteredList(tools, "design")).toEqual(tools);
+
+        tools.push({ category: "writing" });
+        expect(filteredList(tools, "writing")).toEqual([
+            { category: "writing" },
+        ]);
+        expect(filteredList(tools, "design")).toEqual([{ category: "design" }]);
     });
 });

@@ -6,16 +6,12 @@
  * @param {Array} filters
  * @returns
  */
-export const filteredList = (tools, filters, category) => {
-    // if (!filters?.length) {
-    //     return tools;
-    // }
+export const filteredList = (tools, category) => {
 
     if(!category) return tools;
 
     const regCategory = new RegExp(category, "i");
     return tools.filter((t) => regCategory.test(t.category));
-    // return tools.filter((t) => filters.find((f) => t.labels?.includes(f))); // Dont delete this is to filter on multiple labels
 };
 
 export default filteredList;

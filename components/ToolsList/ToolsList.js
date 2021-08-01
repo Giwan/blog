@@ -5,9 +5,9 @@ import ToolItem from "./ToolItem";
 import { filteredList } from "../../utils/helpers";
 // Behance.net, Dribble.com
 
-const ToolsList = ({ filters = [], category }) => (
+const ToolsList = ({ category }) => (
     <section className={styles.toolsList}>
-        {filteredList(tools, filters, category).map((tool) => (
+        {filteredList(tools, category).map((tool) => (
             <ToolItem key={tool.url} tool={tool} />
         ))}
     </section>
