@@ -151,7 +151,7 @@ const tools = [
         labels: [labels.productivity, labels.writing],  
     },
     {
-        title: "codepen.io",
+        title: "codepen",
         url: "https://codepen.io",
         description: <Codepen />,
         price: 0,
@@ -159,7 +159,7 @@ const tools = [
         labels: [labels.productivity, labels.engineering], 
     },
     {
-        title: "codesandbox.io",
+        title: "codesandbox",
         url: "https://codesandbox.io/",
         description: <Codesandbox />,
         price: 0,
@@ -167,7 +167,7 @@ const tools = [
         labels: [labels.productivity, labels.engineering], 
     },
     {
-        title: "weTransfer.com",
+        title: "weTransfer",
         url: "https://wetransfer.com/",
         description: <WeTransfer />,
         price: 0,
@@ -175,7 +175,7 @@ const tools = [
         labels: [labels.productivity, labels.email], 
     },
     {
-        title: "hackerspad.net",
+        title: "hackerspad",
         url: "https://hackerspad.net/",
         description: <HackersPad />,
         price: 0,
@@ -183,7 +183,7 @@ const tools = [
         labels: [labels.productivity, labels.project], 
     },
     {
-        title: "etherpad.org",
+        title: "etherpad",
         url: "https://etherpad.org/",
         description: <Etherpad />,
         price: 0,

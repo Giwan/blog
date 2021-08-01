@@ -1,22 +1,38 @@
-import labels from "../../data/labels";
+import { subCategories } from "../../data/categories";
 import { button } from "./FilterTools.module.css";
 
-const FilterTools = function ({ setFilter, filters }) {
+/**
+ * Shows a list of buttons that the user can use to filter on.
+ * It loops through the labels available.
+ * Not all labels have content however.
+ * @param {*} param0
+ * @returns
+ */
+const FilterTools = function ({ setFilter, filters, setCategory, category }) {
     const handleClick = function (e) {
-        setFilter([e.currentTarget.value]);
+        // setFilter([e.currentTarget.value]);
+        setCategory(e.currentTarget.value);
     };
 
-    return Object.keys(labels).map((label) => (
+    const clearFilters = () => setCategory(undefined);
+
+    const filterButtons = Object.keys(subCategories).map((label) => (
         <button
             onClick={handleClick}
             key={label}
-            value={label}
+            value={subCategories[label]}
             className={button}
-            data-active={filters.includes(label)}
+            data-active={category === subCategories[label]}
         >
-            {label}
+            {subCategories[label]}
         </button>
     ));
+    const allButton = (
+        <button key="all-button" onClick={clearFilters} className={button} data-active={!category}>
+            All
+        </button>
+    );
+    return [allButton, ...filterButtons];
 };
 
 export default FilterTools;

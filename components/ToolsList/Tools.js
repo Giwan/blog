@@ -3,15 +3,13 @@ import ToolsList from "./ToolsList";
 import FilterTools from "./FilterTools";
 
 const Tools = () => {
-    const [filterList, setFilterList] = useState([]);
+    const [filters, setFilter] = useState([]);
+    const [category, setCategory] = useState();
 
     return (
         <>
-            <FilterTools
-                setFilter={setFilterList}
-                filters={filterList}
-            />
-            <ToolsList filters={filterList} />
+            <FilterTools {...{ setFilter, filters, setCategory, category }} />
+            <ToolsList {...{ filters, category }} />
         </>
     );
 };
