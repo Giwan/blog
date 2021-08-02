@@ -20,5 +20,7 @@ export default Object.freeze({
     writing: "writing",
     personal: "personal",
     wireframe: "wireframe",
-    notes: "notes"
+    notes: "notes",
+    software: "software",
+    news: "news"
 });

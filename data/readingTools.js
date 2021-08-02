@@ -20,6 +20,14 @@ const readingTools = [
         labels: [labels.reading, labels.productivity, labels.education],
     },
     {
+        title: "HackerNews",
+        url: "https://news.ycombinator.com/",
+        description: "Lots of technical news of higher quality. Very little clickbait kind of content. The comments and discussions can be interesting.",
+        price: 0,
+        category: categories.READING,
+        labels: [labels.reading, labels.news],
+    },
+    {
         title: "Medium",
         url: "https://medium.com/",
         description: "Medium has lots of good content. Unfortunately I'm not always happy with the direction that it's taking as a platform",
