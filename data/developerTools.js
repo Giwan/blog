@@ -4,6 +4,7 @@ import Cloudinary from "./toolsData/cloudinary.mdx";
 import Codepen from "./toolsData/codepen.mdx";
 import Codesandbox from "./toolsData/codesandbox.mdx";
 import Glitch from "./toolsData/glitch.mdx";
+import Replit from "./toolsData/replit.mdx";
 
 
 const developerTools = [
@@ -48,6 +49,15 @@ const developerTools = [
         category: categories.DEVELOPER,
         labels: [labels.productivity, labels.engineering],
     },
+    {
+        title: "Replit",
+        url: "https://replit.com/",
+        description: <Replit />,
+        price: 0,
+        category: categories.DEVELOPER,
+        labels: [labels.productivity, labels.engineering],
+    },
+
 ];
 
 export default developerTools;

@@ -1,6 +1,6 @@
 .toolsList {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 200px);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: calc(var(--unit) * 2);
 }
 
