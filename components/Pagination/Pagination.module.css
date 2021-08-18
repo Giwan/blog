@@ -1,0 +1,32 @@
+.pageButtonContainer {
+    display: flex;
+    margin: var(--unit);
+}
+
+.button {
+    background-color: #66d9ef;
+    color: var(--color-primary);
+    text-transform: capitalize;
+    font-size: 18px;
+    border: none;
+    padding: var(--unit);
+    margin-right: 16px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px #e6db74;
+    transition: transform .15s;
+    cursor: pointer;
+}
+
+.button:active {
+    transform: scale(0.97);
+    box-shadow: 0 0 1px;
+}
+
+.pageNumberStyle {
+    color: snow;
+    padding: var(--unit);
+    font-size: 18px;
+    margin-right: var(--unit);
+    border-radius: 50%;
+}
