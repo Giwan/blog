@@ -1,7 +1,7 @@
 import categories from "./categories";
 import labels from "./labels";
 import HackersPad from "./toolsData/hackerspad.mdx";
-import ProductHunt from "./toolsData/producthunt.mdx";
+import ProductHunt from "./toolsData/productHunt.mdx";
 
 const softwareTools = [
     {
