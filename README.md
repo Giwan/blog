@@ -63,3 +63,7 @@ The script returns a reference value that is added to tools data file in `/data/
 ```
 
 The above entry should be entered manually. It will then show up on the design page.
+
+---
+# Troubleshooting
+Having some issues with deploying.
