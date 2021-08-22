@@ -22,13 +22,7 @@ const ArticleHeader = ({ meta, isBlogPost }) => {
     };
     return (
         <div className={styles.articleItem}>
-            <header className={styles.articleHeader}>
-                {isBlogPost ? (
-                    <h1 className={styles.articleHeaderh1}>{meta.title}</h1>
-                ) : (
-                    <h2 className={styles.articleItemHeader}>{meta.title}</h2>
-                )}
-            </header>
+            <ArticleTitle {...{ isBlogPost, meta }} />
             <div className={styles.articleHeaderMetaDetails}>
                 <span>{meta.readTime + " minutes"}</span>
                 <span>
@@ -37,22 +31,7 @@ const ArticleHeader = ({ meta, isBlogPost }) => {
                         dateOptionsFiltered
                     )}
                 </span>
-                {!isBlogPost && (
-                    <button className={readButton}>
-                        <svg
-                            width="8"
-                            height="12"
-                            viewBox="0 0 8 12"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M1.41 0L0 1.41L4.58 6L0 10.59L1.41 12L7.41 6L1.41 0Z"
-                                fill="#828282"
-                            />
-                        </svg>
-                    </button>
-                )}
+                <OpenArrow {...{ isBlogPost }} />
             </div>
             <div className={styles.articleHeaderSummary}>
                 {isBlogPost ? null : <p>{meta.description}</p>}
@@ -62,3 +41,36 @@ const ArticleHeader = ({ meta, isBlogPost }) => {
 };
 
 export default ArticleHeader;
+
+const ArticleTitle = ({ isBlogPost, meta: { title } }) => {
+    return (
+        <header className={styles.articleHeader}>
+            {isBlogPost ? (
+                <h1 className={styles.articleHeaderh1}>{title}</h1>
+            ) : (
+                <h2 className={styles.articleItemHeader}>{title}</h2>
+            )}
+        </header>
+    );
+};
+
+const OpenArrow = ({ isBlogPost }) => {
+    if (isBlogPost) return null;
+
+    return (
+        <button className={readButton}>
+            <svg
+                width="8"
+                height="12"
+                viewBox="0 0 8 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M1.41 0L0 1.41L4.58 6L0 10.59L1.41 12L7.41 6L1.41 0Z"
+                    fill="#828282"
+                />
+            </svg>
+        </button>
+    );
+};

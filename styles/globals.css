@@ -65,15 +65,14 @@ a:active {
 }
 
 p {
-    line-height: 1.75em;
+    line-height: 1.6em;
     color: var(--color-primary-dark);
 }
 
-p code {
+pre[class*="language-"] code[class*="language-"] {
     background-color: var(--color-primary);
     padding: calc(var(--unit) / 6) var(--unit);
-    color: var(--color-accent);
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-small-x);
     border-radius: var(--unit);
     word-break: break-word;
 }
