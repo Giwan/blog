@@ -27,5 +27,6 @@
 .article h2,
 .article h3,
 .article h4 {
-    font-weight: normal;
+    font-weight: 600;
+    font-family: var(--font-family-header);
 }

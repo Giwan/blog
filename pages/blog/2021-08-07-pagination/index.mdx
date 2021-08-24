@@ -16,8 +16,8 @@ export default ({ children }) => <Article meta={meta}>{children}</Article>;
 I needed to build a pagination component recently. The one added from NPM was 3.8 MB.
 This component is lighter. 
 
-It shows always shows five page buttons. Left and right of those are buttons to move by one page. 
-In addition there are buttons for the first and last pages. 
+It shows always shows five page buttons. There are buttons to move by one page. 
+In addition buttons for the first and last pages. 
 
 <BasicPagination />
 
@@ -36,10 +36,10 @@ const Pagination = function() {
 export default Pagination;
 
 ```
-With a total number of 100 pages, the component should only show 5 at any given time. The selected page is centered if possible.
+With a total number of 10 pages, the component should only show 5 at _any_ given time. The selected page is centered if possible.
 At the end or beginning of the list, there needs to be either 4 pages to the left or right of the selected page. 
 
-<PageContainer totalPages={100} startPage={1} />
+<PageContainer totalPages={10} startPage={1} />
 
 Let's break this down in the next section
 
@@ -317,19 +317,19 @@ const convertLabel = (label) =>
 #### dangerouslySetInnerHTML
 Why is it OK to use `dangerouslySetInnerHTML` in this case? 
 The values that will arrive in the `label` variable are hard coded in this case. 
-There fore it's known which values will be converted to HTML. There are no unsafe values being passed in this case. 
+Therefore it's known which values will be converted to HTML. There are no unsafe values being passed in this case. 
 
 That being said, when _does_ this become a security issue? 
 If the `label` value is being provided by the end user in anyway! 
 A malicious user could insert script into label value which would get executed. That would compromise the front-end. 
 
 ### Creating the buttons
-Depending on the current page value, several buttons are created or not created. 
-If the user is at the beginning, on page one, then no buttons are created before it.
-However, there are now four buttons after it. 2,3,4 and 5. 
+Depending on the current page value, several buttons are created or _not_ created. 
+If the current page is page one, then no buttons are created before it.
+However, there are now **four** buttons after it. 2,3,4 and 5. 
 
 If the user is  at the end of the list then it's the exact opposite. 
-The current page is 100. The last page. Four buttons are created before it. 96, 97, 98 and 99. No buttons are created after it. 
+The current page is 10. The last page. Four buttons are created before it. 6, 7, 8 and 9. No buttons are created after it. 
 
 If the current page is somewhere in the middle of the list then only two buttons are before and after it. 
 
@@ -346,31 +346,17 @@ I found this to be much more readable.
  * @param {Number} totalPages
  * @returns Object
  */
-const createButtons = function (values = [], setPage, pageNumber, totalPages) {
-    /**
-     * Check if `val` is a valid value. 
-     * If it violates any of the rules then `undefined` is returned.
-     * That signals that `val` is not a valid number
-     * @param {Number} val 
-     * @returns Boolean
-     */
-    function isValid(val) {
-        const nextPage = pageNumber + val;
-
-        if (nextPage < 1 || nextPage >= totalPages + 1) return;
-
-        if (nextPage < pageNumber - 2 && totalPages - pageNumber >= 2) return;
-
-        if (nextPage > pageNumber + 2 && pageNumber > 2) return;
-
-        return true;
-    }
-
-    // if the `val` is a valid value then return the 
+export const createButtons = function (
+    values = [],
+    setPage,
+    pageNumber,
+    totalPages
+) {
+    // if the `val` is a valid value then return the
     // object with it's label and action (to go to that page)
     return values.map(
         (val) =>
-            isValid(val) && {
+            isValid(val, pageNumber, totalPages) && {
                 label: pageNumber + val,
                 action: () => setPage(pageNumber + val),
             }
@@ -378,6 +364,35 @@ const createButtons = function (values = [], setPage, pageNumber, totalPages) {
 };
 ```
 
-While the design here needs work, I believe the functionality matches the requirements. 
+When creating the buttons the `isValid` method determines if a button should actually be created, or not. 
+
+```js
+
+
+/**
+ * Check if `val` is a valid value.
+ * If it violates any of the rules then `undefined` is returned.
+ * That signals that `val` is not a valid number
+ * @param {Number} val
+ * @returns Boolean
+ */
+export function isValid(val, pageNumber, totalPages, limit = 5) {
+
+    const nextPage = pageNumber + val;
+    const remainingPages = totalPages - pageNumber;
+
+    if (nextPage < 1 || nextPage >= totalPages + 1) return;
+
+    if (nextPage < pageNumber - 2 && totalPages - pageNumber >= 2) return;
+    if ([1,2].includes(remainingPages) && remainingPages - limit === val) return;
+
+    if (nextPage > pageNumber + 2 && pageNumber > 2) return;
+    if (pageNumber === 2 && val === 4) return;
+
+    return true;
+}
+```
+
+This `isValid` method can be written more elegantly. However, for now, it gets the job done. 
 
 

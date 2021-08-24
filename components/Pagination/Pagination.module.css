@@ -1,21 +1,40 @@
 .pageButtonContainer {
     display: flex;
+    flex-direction: column;
+    height: 100px;
+    min-width: 220px;
+    justify-content: space-between;
     margin: var(--unit);
+    /* background-color: red; */
+}
+
+.basicPaginationContainer {
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    border-radius: calc(var(--unit) * 2);
 }
 
 .button {
-    background-color: #66d9ef;
-    color: var(--color-primary);
+    background-color: var(--color-primary);
+    /* background-color: green; */
+    color: var(--color-primary-light);
     text-transform: capitalize;
     font-size: 18px;
     border: none;
-    padding: var(--unit);
-    margin-right: 16px;
-    margin-bottom: 16px;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px #e6db74;
+    padding: calc(var(--unit) / 2);
     transition: transform .15s;
     cursor: pointer;
+    width: 4ch;
+    box-sizing: border-box;
+    align-self: center;
+}
+
+.button:last-child {
+    margin-right: 0;
 }
 
 .button:active {
@@ -25,8 +44,29 @@
 
 .pageNumberStyle {
     color: snow;
-    padding: var(--unit);
     font-size: 18px;
-    margin-right: var(--unit);
-    border-radius: 50%;
+    border-radius: calc(var(--unit) / 2);
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    width: 4ch;
+    display: inline-block;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+.pageButtonNumbers {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: calc(var(--unit) / 4);
+    /* background-color: pink; */
+    place-items: center;
+
+}
+
+@media (max-width: 600px) {
+    .button, .pageNumberStyle {
+        font-size: 14px;
+    }
 }
