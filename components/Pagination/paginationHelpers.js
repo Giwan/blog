@@ -1,3 +1,4 @@
+import isValid from "@giwan/is-valid-page-number";
 /**
  * Creates the buttons based on the current page.
  * If the currentPage is on the first page then
@@ -45,21 +46,21 @@ export const createButtons = function (
  * @param { Number } limit The button limit (Usage can be improved)
  * @returns Boolean
  */
-export function isValid(val, pageNumber, totalPages, limit = 5) {
+// export function isValid(val, pageNumber, totalPages, limit = 5) {
 
-    const nextPage = pageNumber + val;
-    const remainingPages = totalPages - pageNumber;
+//     const nextPage = pageNumber + val;
+//     const remainingPages = totalPages - pageNumber;
 
-    // Boundary
-    if (nextPage < 1 || nextPage > totalPages) return;
+//     // Boundary
+//     if (nextPage < 1 || nextPage > totalPages) return;
 
-    // The previous buttons
-    if (nextPage < pageNumber - 2 && totalPages - pageNumber >= 2) return;
-    if ([1,2].includes(remainingPages) && remainingPages - limit === val) return;
+//     // The previous buttons
+//     if (nextPage < pageNumber - 2 && totalPages - pageNumber >= 2) return;
+//     if ([1,2].includes(remainingPages) && remainingPages - limit === val) return;
 
-    // The next buttons
-    if (nextPage > pageNumber + 2 && pageNumber > 2) return;
-    if (pageNumber === 2 && val === 4) return;
+//     // The next buttons
+//     if (nextPage > pageNumber + 2 && pageNumber > 2) return;
+//     if (pageNumber === 2 && val === 4) return;
 
-    return true;
-}
+//     return true;
+// }

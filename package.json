@@ -13,6 +13,7 @@
         "prepare": "husky install"
     },
     "dependencies": {
+        "@giwan/is-valid-page-number": "^0.0.4",
         "@mapbox/rehype-prism": "^0.7.0",
         "@next/mdx": "^11.1.0",
         "@testing-library/jest-dom": "^5.14.1",
