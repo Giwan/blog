@@ -1,4 +1,5 @@
 import isValid from "@giwan/is-valid-page-number";
+export { isValid }; 
 /**
  * Creates the buttons based on the current page.
  * If the currentPage is on the first page then
