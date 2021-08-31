@@ -15,13 +15,13 @@
     "dependencies": {
         "@giwan/is-valid-page-number": "^0.0.4",
         "@mapbox/rehype-prism": "^0.7.0",
-        "@next/mdx": "^11.1.0",
+        "@next/mdx": "^11.1.2",
         "@testing-library/jest-dom": "^5.14.1",
         "@testing-library/react": "^12.0.0",
         "babel-jest": "^27.0.6",
         "jest": "^27.0.6",
         "markdown-spellcheck": "^1.3.1",
-        "next": "^11.1.0",
+        "next": "^11.1.2",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
     },
