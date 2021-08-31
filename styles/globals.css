@@ -65,7 +65,7 @@ a:active {
 }
 
 p {
-    line-height: 1.6em;
+    line-height: calc(1.5em + 0.2vw);
     color: var(--color-primary-dark);
 }
 

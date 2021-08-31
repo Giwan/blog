@@ -37,7 +37,7 @@
 }
 
 .articleHeaderSummary p {
-    line-height: 150%;
+    line-height: calc(1.55em + .2vw);
     margin: 0;
     font-family: var(--font-family-text-2);
     font-size: var(--font-size-small);
