@@ -29,7 +29,10 @@
     "devDependencies": {
         "cloudinary": "^1.26.3",
         "dotenv": "^10.0.0",
+        "eslint": "7.32.0",
+        "eslint-config-next": "11.1.2",
         "husky": "^7.0.1",
+        "prettier": "^2.4.1",
         "puppeteer": "^10.2.0",
         "streamifier": "^0.1.1"
     }

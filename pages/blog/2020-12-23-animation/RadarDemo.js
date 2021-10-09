@@ -5,12 +5,12 @@ const style = {
     fontWeight: 800,
 };
 
-export default () => (
+const RadarDemo = () => (
     <div style={style}>
         <a
             href="https://ebony-shaded-duckling.glitch.me"
             target="_blank"
-            rel="noopener noreference"
+            rel="noopener noreferrer"
         >
             <img
                 src="https://res.cloudinary.com/mytoori/image/upload/c_scale,w_300/v1614270412/blog/radar.png"
@@ -19,3 +19,5 @@ export default () => (
         </a>
     </div>
 );
+
+export default RadarDemo;

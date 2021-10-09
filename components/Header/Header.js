@@ -4,7 +4,7 @@ import HeaderNav from "../HeaderNav/HeaderNav";
 
 const Header = () => (
     <header className={styles.header}>
-        <Link href="/">
+        <Link passHref="/">
             <svg
                 className={styles.headerLogo}
                 width="96"

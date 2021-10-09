@@ -19,7 +19,7 @@ const Repos = () => (
     <ul className={styles.repoContainer}>
         {repoData.map((rd) => (
             <li key={rd.name}>
-                <a href={rd.url} alt={rd.name} target="_blank">
+                <a href={rd.url} alt={rd.name} target="_blank" rel="noreferrer">
                     <h2>{rd.name}</h2>
                     <div>{rd.url.replace(/https?:\/\//, "")}</div>
                 </a>
