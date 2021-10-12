@@ -35,6 +35,14 @@ const readingTools = [
         category: categories.READING,
         labels: [labels.reading, labels.productivity, labels.education],
     },
+    {
+        title: "Scribe.rip",
+        url: "https://scribe.rip",
+        description: "Read medium articles without medium",
+        price: 0,
+        category: categories.READING,
+        labels: [labels.reading, labels.productivity],
+    },
 ];
 
 export default readingTools;

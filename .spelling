@@ -115,6 +115,15 @@ HMR
 TOS
 BasicPagination
 PageContainer
+rollup
+rollupjs.org
+CommonJS
+CJS
+ECMA
+ESM
+UMD
+dist
+init
  - pages/blog/2020-10-18-loop-vs-function/index.mdx
  helper1
 
@@ -140,3 +149,5 @@ createDate
 publishedDate
  - pages/design.mdx
 DesignShots
+ - data/about.mdx
+2015
