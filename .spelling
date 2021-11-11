@@ -124,6 +124,7 @@ ESM
 UMD
 dist
 init
+bezier
  - pages/blog/2020-10-18-loop-vs-function/index.mdx
  helper1
 

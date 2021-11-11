@@ -5,6 +5,9 @@ import Codepen from "./toolsData/codepen.mdx";
 import Codesandbox from "./toolsData/codesandbox.mdx";
 import Glitch from "./toolsData/glitch.mdx";
 import Replit from "./toolsData/replit.mdx";
+import ShadowsBrumm from "./toolsData/shadowsBrumm.mdx";
+import CubicBezier from "./toolsData/cubicBezier.mdx";
+import CSSWaves from "./toolsData/CSSWaves.mdx";
 
 
 const developerTools = [
@@ -53,6 +56,30 @@ const developerTools = [
         title: "Replit",
         url: "https://replit.com/",
         description: <Replit />,
+        price: 0,
+        category: categories.DEVELOPER,
+        labels: [labels.productivity, labels.engineering],
+    },
+    {
+        title: "CSS Shadows tool",
+        url: "https://shadows.brumm.af/",
+        description: <ShadowsBrumm />,
+        price: 0,
+        category: categories.DEVELOPER,
+        labels: [labels.productivity, labels.engineering],
+    },
+    {
+        title: "Cubic bezier tool",
+        url: "https://cubic-bezier.com/",
+        description: <CubicBezier />,
+        price: 0,
+        category: categories.DEVELOPER,
+        labels: [labels.productivity, labels.engineering],
+    },
+    {
+        title: "CSS waves",
+        url: "https://svgwave.in/",
+        description: <CSSWaves />,
         price: 0,
         category: categories.DEVELOPER,
         labels: [labels.productivity, labels.engineering],
