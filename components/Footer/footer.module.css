@@ -7,6 +7,7 @@
     min-height: calc(var(--unit) * 10);
     /* margin-top: calc(var(--unit) * 2); */
     font-family: var(--font-family-header);
+    margin-top: calc(var(--unit) *2);
 }
 
 .footer ul {
