@@ -7,7 +7,7 @@ import Glitch from "./toolsData/glitch.mdx";
 import Replit from "./toolsData/replit.mdx";
 import ShadowsBrumm from "./toolsData/shadowsBrumm.mdx";
 import CubicBezier from "./toolsData/cubicBezier.mdx";
-import CSSWaves from "./toolsData/CSSWaves.mdx";
+import CSSWaves from "./toolsData/SVGWater.mdx";
 
 
 const developerTools = [
