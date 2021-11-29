@@ -8,6 +8,9 @@
     /* margin-top: calc(var(--unit) * 2); */
     font-family: var(--font-family-header);
     margin-top: calc(var(--unit) *2);
+    position: relative;
+    left: calc(var(--unit) * -2);
+    width: 100vw;
 }
 
 .footer ul {

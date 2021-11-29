@@ -6,6 +6,7 @@
 
 :root {
     --unit: 16px;
+    --header-height: calc(var(--unit) * 5);
 
     --font-size-default: 24px;
     --font-size-small: 18px;
@@ -46,6 +47,7 @@ body {
     font-family: var(--font-family-text-2);
     /* background-color: var(--color-primary-light); */
     background-color: var(--color-primary-background);
+    overflow: hidden;
 }
 
 a {
