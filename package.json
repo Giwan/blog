@@ -15,7 +15,6 @@
     "dependencies": {
         "@giwan/is-valid-page-number": "^0.0.4",
         "@mapbox/rehype-prism": "^0.8.0",
-        "@mdx-js/loader": "^1.6.22",
         "@next/mdx": "^12.0.7",
         "@testing-library/jest-dom": "^5.16.1",
         "@testing-library/react": "^12.1.2",
