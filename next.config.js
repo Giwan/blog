@@ -12,5 +12,4 @@ module.exports = {
     ...withMDX({
         pageExtensions: ["js", "jsx", "md", "mdx"],
     }),
-    target: "serverless",
 };
