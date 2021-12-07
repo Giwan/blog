@@ -20,6 +20,14 @@ const softwareTools = [
         category: categories.SOFTWARE,
         labels: [labels.productivity, labels.project],
     },
+    {
+        title: "Readme.com",
+        url: "https://readme.com/",
+        description: "Create and manage documentation. ",
+        price: 0,
+        category: categories.SOFTWARE,
+        labels: [labels.productivity, labels.project],
+    },
 ];
 
 export default softwareTools;

@@ -1,6 +1,6 @@
 import categories from "./categories";
 import labels from "./labels";
-import DrawIO from "./toolsData/draw.io.mdx";
+
 import WeTransfer from "./toolsData/wetransfer.mdx";
 import readingTools from "./readingTools";
 import designTools from "./designTools";
@@ -25,14 +25,6 @@ const tools = [
         category: categories.SOCIAL,
         labels: [labels.social],
     },
-    {
-        title: "Draw.io",
-        url: "https://app.diagrams.net/",
-        description: <DrawIO />,
-        price: 0,
-        category: categories.WIREFRAME,
-        labels: [labels.productivity, labels.wireframe, labels.prototype],
-    },
     
     {
         title: "weTransfer",
@@ -55,5 +47,11 @@ Great design. Some inspiration for mytoori.
 They also have good customers with nice designed websites. 
 Those are tools that I might want to list as well. 
 I also like how many of these sites then list other sites that are of interest. 
+
+Hosting category: 
+fly.io
+
+Javascript frameworks: 
+https://remix.run/
 
 */

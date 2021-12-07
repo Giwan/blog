@@ -2,6 +2,7 @@ import categories from "./categories";
 import labels from "./labels";
 import Autodraw from "./toolsData/autodraw.mdx";
 import Framer from "./toolsData/framer.com.mdx";
+import DrawIO from "./toolsData/draw.io.mdx";
 
 const designTools = [
     {
@@ -49,6 +50,22 @@ const designTools = [
         category: categories.DESIGN,
         labels: [labels.productivity, labels.design, labels.prototype],
     },
+    {
+        title: "Draw.io",
+        url: "https://app.diagrams.net/",
+        description: <DrawIO />,
+        price: 0,
+        category: categories.WIREFRAME,
+        labels: [labels.productivity, labels.wireframe, labels.prototype],
+    },
+    {
+        title: "Spline.design",
+        url: "https://spline.design/", 
+        description: "Figma for 3D designs",
+        price: 0,
+        category: categories.DESIGN,
+        labels: [labels.productivity, labels.prototype]
+    }
 ];
 
 export default designTools;
