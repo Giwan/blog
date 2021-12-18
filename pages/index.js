@@ -12,14 +12,13 @@ export const sortPostsByDate = (p1, p2) => {
 };
 
 export const publishedPosts = (posts = []) => {
-    let filteredPosts = posts.filter(
+    const filteredPosts = posts.filter(
         (p) => p.module.meta && !!p.module.meta.published
     );
-    filteredPosts.sort(sortPostsByDate);
-    return filteredPosts;
+    return filteredPosts.sort(sortPostsByDate);
 };
 
-export default function IndexPage() {
+export default function () {
     return (
         <div className={articleListContainer}>
             {publishedPosts(posts).map((post) => (

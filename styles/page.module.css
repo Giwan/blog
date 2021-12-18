@@ -1,0 +1,13 @@
+.whatisPageStyle {
+    max-width: 700px;
+    color: #222222;
+    min-height: calc(100vh - 368px);
+}
+
+.whatisPageStyle h1, .whatisPageStyle h2, .whatisPageStyle h3, .whatisPageStyle h4 {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.whatisPageStyle p {
+    color: #313131;
+}

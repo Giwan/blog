@@ -72,7 +72,6 @@ p {
 }
 
 pre[class*="language-"] code[class*="language-"] {
-    background-color: var(--color-primary);
     padding: calc(var(--unit) / 6) var(--unit);
     font-size: var(--font-size-small-x);
     border-radius: var(--unit);

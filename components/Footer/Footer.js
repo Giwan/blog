@@ -11,6 +11,11 @@ const footerData = [
         url: "https://mytoori.com",
         alt: "Mytoori main application",
     },
+    {
+        label: "What is",
+        url: "/whatis/",
+        alt: "Explanations of basic concepts and tools"
+    }
 ];
 
 const Footer = () => (

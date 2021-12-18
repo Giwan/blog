@@ -1,0 +1,48 @@
+# What is a Framework? 
+
+It's possible to write a web application with Vanilla JavaScript. That's JavaScript in it's purest form. 
+For example, say a header should be added to an otherwise blank `HTML` page. 
+
+```html
+<!-- index.html -->
+<body>
+    <script>
+        const newH1 = document.createElement("h1"); 
+        newH1.innerText = "This H1 was created with JavaScript";
+        document.body.appendChild(newH1);
+    </script>
+</body>
+
+```
+
+Extend this concept and an entire web app can be created.
+The resulting app will however, is likely very difficult to maintain. 
+
+## Why is a non-framework hard to maintain? 
+
+This can be best illustrated with an example. Everyone has to write a resume at some point. 
+The resume styles vary quite wildly. Speak to someone who has to review large amounts however and it will quickly become clear that a standard format would be better. 
+Typically personal info, skills, experience, etc. 
+If every applicant were to write the CV in a similar _framework_, they can easily review and pick the best candidates. 
+The person writing her or his resume also knows exactly how to write it to increase their chances of success. 
+
+A resume is often a single sheet of paper, at most probably three. 
+Web applications, if printed, are likely to be a lot more than this. 
+
+A framework therefore helps to structure the application. 
+It can also reduce or "black box" some of the code. 
+
+## About Reactivity
+It's important to realise that in a web browser, the Document Object Model (DOM) and JavaScript are two separate environments. 
+The example above has several extra challenges. The `newH1` holds a reference to a DOM Element. The `H1`. 
+While the `newH1` variable is scope the DOM element can be updated and it's values read. 
+
+As the application grows and more DOM Elements are added, this quickly becomes unwieldy. 
+
+Reactivity effectively establishes a link between the JavaScript environment and the DOM. 
+Changes to a linked JavaScript variable would immediately update in the DOM and in most cases the other way around. 
+
+# Easier, structured and faster
+In conclusion a framework makes it easier to develop a web application. It's not required. It is possible to write an app with Vanilla JS. 
+In that case it's up to you to make sure the architectural decisions are sound and will not cause issues later on. 
+For enterprise teams this is a major risk. Using a framework means that new developers can get started quickly. They are benefiting from best practices from the community.  

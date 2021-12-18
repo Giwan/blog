@@ -1,0 +1,81 @@
+# What is React JS?
+
+React started as a JavaScript based UI library. 
+Today it's one of the biggest frameworks used in front-end development.
+Not sure what a JavaScript Framework is? Find out more in [what is a framework?](/whatis/framework/). 
+
+## Why is ReactJS so popular? 
+
+### Developers
+Starting out with some great concepts, that quickly resonated with developers. 
+There are few frameworks that rely so heavily on pure JavaScript to do most of the work. 
+For the majority of the time, one is writing JS. Learning and using React means, becoming a better JS developer. 
+Many devs enjoy increasing their skill level. 
+
+### JSX
+While React components could be written in Pure JavaScript, there was one area where an abstraction layer was appreciated. 
+Creating HTML Elements in pure JS can be tedious and error prone. JSX looks and feels like `HTML` syntax. 
+It was easy to learn if you already knew HTML, which many devs typically start with. 
+There are edge cases of course but not enough to cause any issues. 
+Today `JSX` is recognised as a templating syntax that can also be used in other areas. 
+
+### Facebook money
+It probably also helps that a company like Facebook is behind ReactJS. 
+They have resources to invest in growing the developer community. 
+There are visible and invisible benefits. 
+
+## How does ReactJS work? 
+In it's most basic form a web _site_ consists of `HTML`, `CSS` and `JavaScript`. 
+One _can_ write a website with pure `HTML`. `CSS` helps to make it pretty. JS makes it interactive. 
+
+```html
+    <!-- pure html example -->
+    <html>
+        <body>
+            <h1>This is a simple web site</h1>
+            <p>It does not do anything apart from showing these two lines of text</p>
+        </body>
+    </html>
+
+```
+
+Say the `h1` should be red, CSS could be added to take care of that. 
+If the `h1` is clicked though, JS could help to perform some kind of action. 
+
+React, and really any SPA, takes this basic principle and turns it around. 
+What if JavaScript is used to write the HTML instead. Then the starting point is a simple website that only takes a JS src file. 
+
+```HTML
+    <!-- SPA example -->
+    <html>
+        <body>
+            <div id="root"></div>
+        </body>
+        <script src="app.js"></script>
+    </html>
+
+```
+
+This basic HTML site has nothing in it before the script is executed. 
+The script which is the React application creates everything that will be in the entire application. 
+
+The entire web page is therefore created with JavaScript. 
+At first glance, this seems great. 
+There are some drawbacks to this approach however. 
+These are discussed in this article "rendering everything on the client". 
+
+## Reactivity
+Reactivity is often one of the main advantages of using a front-end framework versus writing the site with just HTML, CSS and JS. 
+Imagine a JavaScript variable with the the name of this blog. A `h1` tag is created to _display_ (a.k.a render) that name on the screen. 
+Change the name in JavaScript and the `h1` value remains the same. It has been already been rendered and there is no reason for the `h1` to _react_ to the change in JavaScript. 
+
+This becomes tedious very quickly. The value now needs to be changed in two places. 
+Building an application in that model is error prone.
+
+Reactivity solves this. The framework guarantees that if the variable changes in JavaScript, then that change is immediately rendered on screen. 
+Building (large scale) apps is now much easier. 
+
+# Additional
+There is lots more to a framework like React. This was just a essential look at the Framework. 
+
+* [`reactjs.org`](https://reactjs.org/)

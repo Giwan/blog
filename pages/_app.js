@@ -3,7 +3,7 @@ import "../node_modules/prismjs/themes/prism-okaidia.css";
 import "../styles/globals.css";
 
 const App = ({ Component, pageProps }) => (
-    <Layout pageTitle="Mytoori Blog" description="Mytoori Blog">
+    <Layout pageTitle={pageProps.pageTitle} description={pageProps.description}>
         <Component {...pageProps} />
     </Layout>
 );
