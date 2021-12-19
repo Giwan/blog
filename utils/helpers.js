@@ -6,7 +6,18 @@ export { filteredList };
 export const reverseDate = (date = "") =>
     parseInt(date.split("-").reverse().join(""));
 
-export const getDateNumber = (date) => date.replace(/-/g, "");
+/**
+ * Format the string date to a number
+ * Typically used for sorting by date
+ * @param {String} date A date string that formatted as 10-10-1980
+ * @returns Number
+ */
+export const getDateNumber = (dateString) => {
+    if (typeof dateString !== "string") {
+        throw new Error("Provided date argument is not of type string");
+    }
+    return Number(dateString?.replace(/-/g, "")) || 0;
+}
 
 /**
  * Check to see what style should be applied.

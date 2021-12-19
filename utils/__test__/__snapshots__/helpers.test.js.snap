@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`get date number should return a date number 1`] = `"Provided date argument is not of type string"`;
+
+exports[`get date number should return a date number 2`] = `"Provided date argument is not of type string"`;
