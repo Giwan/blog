@@ -1,6 +1,7 @@
 import filteredList from "./helpers/filteredList";
+import { sortPostsByDate } from "./helpers/sortPostsByDate";
 
-export { filteredList };
+export { filteredList, sortPostsByDate };
 
 
 export const reverseDate = (date = "") =>

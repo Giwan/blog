@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sort posts by date should sort the posts 1`] = `"Invalid published date. Value of type string expected"`;
