@@ -6,7 +6,7 @@ const reactJS = {
 }
 
 const framework = {
-    title : "Framework", 
+    title : "JavaScript Framework", 
     introUrl: "/whatis/framework",
     externalUrl: "https://en.wikipedia.org/wiki/Framework",
 }

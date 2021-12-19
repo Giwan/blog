@@ -56,4 +56,6 @@ https://remix.run/
 
 https://monkeytype.com/
 
+https://fontjoy.com
+
 */
