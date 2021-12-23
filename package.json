@@ -10,7 +10,8 @@
         "test:watch": "jest --watch",
         "screenshot": "node nodeScreenshot.js",
         "spellcheck": "mdspell -nar '**/*.mdx'",
-        "prepare": "husky install"
+        "prepare": "husky install", 
+        "populateSearchData": "node populateSearchData.js"
     },
     "dependencies": {
         "@giwan/is-valid-page-number": "^0.0.4",
@@ -34,5 +35,10 @@
         "prettier": "^2.5.1",
         "puppeteer": "^13.0.0",
         "streamifier": "^0.1.1"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run populateSearchData && git add cache/*"
+        }
     }
 }
