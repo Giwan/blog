@@ -1,0 +1,5 @@
+.resultItem {
+    list-style: none;
+    margin: var(--unit) 0;
+    font-size: var(--font-size-large);
+}

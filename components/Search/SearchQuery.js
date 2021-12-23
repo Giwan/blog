@@ -1,10 +1,10 @@
-
+import { searchQueryStyle, searchQueryInput, searchQueryButton } from "../../styles/searchQuery.module.css";
 
 const SearchQuery = function({handleSearch}) {
     return (
-        <form onSubmit={handleSearch}>
-            <input type="search" name="q" />
-            <button>Search</button>
+        <form onSubmit={handleSearch} className={searchQueryStyle}>
+            <input type="search" name="q" className={searchQueryInput} />
+            <button className={searchQueryButton}>Search</button>
         </form>
     )
 }
