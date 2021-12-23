@@ -58,4 +58,6 @@ https://monkeytype.com/
 
 https://fontjoy.com
 
+gitter.im
+
 */
