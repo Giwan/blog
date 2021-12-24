@@ -1,8 +1,6 @@
 
  /* This import is probably less performant */
- /* @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap'); */
- /* @import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap'); */
- @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Oswald&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700');
 
 :root {
     --unit: 16px;
@@ -30,10 +28,10 @@
 
     /* fonts */
     /* --font-family-header: Helvetica, sans-serif; */
-    --font-family-header: Helvetica, sans-serif;
-    --font-family-header-2: Lora, Helvetica, sans-serif;
-    --font-family-text-2: Lora, Georgia, serif;
-    --font-family-meta: Oswald, Helvetica, sans-serif;
+    --font-family-header: Inter, Helvetica, sans-serif;
+    --font-family-header-2: Inter, Helvetica, sans-serif;
+    --font-family-text-2: Inter, Helvetica, sans-serif;
+    --font-family-meta: Inter, Helvetica, sans-serif;
 }
 
 html,
@@ -41,11 +39,8 @@ body {
     padding: 0;
     margin: 0;
     font-size: var(--font-size-default);
-    /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 
     font-family: var(--font-family-text-2);
-    /* background-color: var(--color-primary-light); */
     background-color: var(--color-primary-background);
     overflow: hidden;
 }
