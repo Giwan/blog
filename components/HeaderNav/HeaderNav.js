@@ -18,8 +18,8 @@ const headerNavData = [
         target: "/design",
     },
     {
-        name: "about",
-        target: "/about",
+        name: "search",
+        target: "/search",
     },
 ];
 
