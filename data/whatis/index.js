@@ -17,11 +17,17 @@ const mdx = {
     externalUrl: "https://mdxjs.com/"
 }
 
+const nextjs = {
+    title: "NextJS",
+    introUrl: "/whatis/nextjs",
+    externalUrl: "https://nextjs.org"
+}
+
 const tags = [
     reactJS,
     framework,
     mdx,
-    "NextJS",
+    nextjs,
     "Hosting",
     "WhatsApp",
     "GatsbyJS",
