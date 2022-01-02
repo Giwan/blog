@@ -5,6 +5,7 @@ import HeaderNav from "../HeaderNav/HeaderNav";
 const Header = () => (
     <header className={styles.header}>
         <Link passHref={true} href="/">
+            <a>
             <svg
                 className={styles.headerLogo}
                 width="96"
@@ -18,6 +19,7 @@ const Header = () => (
                     fill="black"
                 />
             </svg>
+            </a>
         </Link>
         <HeaderNav />
     </header>
