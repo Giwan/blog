@@ -5,6 +5,8 @@ import Codepen from "./toolsData/codepen.mdx";
 import Codesandbox from "./toolsData/codesandbox.mdx";
 import Glitch from "./toolsData/glitch.mdx";
 import Replit from "./toolsData/replit.mdx";
+import Jsfiddle from "./toolsData/jsfiddle.mdx";
+import StackBlitz from "./toolsData/stackblitz.mdx";
 import ShadowsBrumm from "./toolsData/shadowsBrumm.mdx";
 import CubicBezier from "./toolsData/cubicBezier.mdx";
 import CSSWaves from "./toolsData/SVGWater.mdx";
@@ -56,6 +58,22 @@ const developerTools = [
         title: "Replit",
         url: "https://replit.com/",
         description: <Replit />,
+        price: 0,
+        category: categories.DEVELOPER,
+        labels: [labels.productivity, labels.engineering],
+    },
+    {
+        title: "JSFiddle",
+        url: "https://jsfiddle.net/",
+        description: <Jsfiddle />,
+        price: 0,
+        category: categories.DEVELOPER,
+        labels: [labels.productivity, labels.engineering],
+    },
+    {
+        title: "StackBlitz",
+        url: "https://stackblitz.com/",
+        description: <StackBlitz />,
         price: 0,
         category: categories.DEVELOPER,
         labels: [labels.productivity, labels.engineering],
