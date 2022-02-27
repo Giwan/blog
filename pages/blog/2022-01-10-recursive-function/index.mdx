@@ -46,7 +46,7 @@ const recurisveLoop = async function() {
     }
 
     const site = sites[i]; // get the current site
-    const data = awat fetch(site);
+    const data = await fetch(site);
 
     // validation (this is very crude for the sake of the example)
     validateXFrameHeaders(data.headers); // the result is being ignored
