@@ -1,6 +1,6 @@
 import { posts } from "../../cache/searchData";
 
-export default function(request, response) {
+const Search = function(request, response) {
     const results = request.query.q 
     ? posts.filter(post => post.title.toLowerCase().includes(request.query.q)) 
     : []; 
@@ -10,3 +10,5 @@ export default function(request, response) {
 
     response.end(JSON.stringify({ results }));
 }
+
+export default Search;

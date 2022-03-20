@@ -1,10 +1,12 @@
 import Nextjs from "../../../data/whatis/nextjs.mdx";
 import { whatisPageStyle } from "../../../styles/page.module.css";
 
-export default function() {
+const NextJsIndex = function() {
     return(
         <div className={whatisPageStyle}>
             <Nextjs />
         </div>
     )
 }
+
+export default NextJsIndex;

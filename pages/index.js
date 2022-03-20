@@ -1,3 +1,4 @@
+import React from "react";
 import ArticleItem from "../components/ArticleItem/ArticleItem";
 import { posts } from "../getAllPosts";
 import { articleListContainer } from "./index.module.css";
@@ -15,7 +16,7 @@ export const publishedPosts = (posts = []) => {
     return filteredPosts.sort(sortPostsByDate);
 };
 
-export default function () {
+const Index = function () {
     return (
         <div className={articleListContainer}>
             {publishedPosts(posts).map((post) => (
@@ -24,3 +25,5 @@ export default function () {
         </div>
     );
 }
+
+export default Index;

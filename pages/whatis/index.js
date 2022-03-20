@@ -9,10 +9,10 @@ import { tagsContainer, tagsList } from "../../styles/tags.module.css";
 import tags from "../../data/whatis";
 import Description from "./whatisDescription.md"
 
-export default function () {
+const WhatIsIndex = function () {
     return (
         <div className={tagsContainer}>
-            <h1>"What is" by tags</h1>
+            <h1>&quot;What is&quot; by tags</h1>
             <Description />
             <ul className={tagsList}>
                 {tags.map(tag => <TagItem key={tag?.title || tag} {...{ tag }} />)}
@@ -29,3 +29,5 @@ export function TagItem({ tag }) {
     // return <li>{title}<sub>{tag?.description}</sub></li>
     return <li>{title}</li>
 }
+
+export default WhatIsIndex;

@@ -1,10 +1,12 @@
 import FrameworkMDX from "../../../data/whatis/framework.mdx";
 import { whatisPageStyle } from "../../../styles/page.module.css";
 
-export default function() {
+const FrameworkIndex = function() {
     return(
         <div className={whatisPageStyle}>
             <FrameworkMDX />
         </div>
     )
 }
+
+export default FrameworkIndex;
