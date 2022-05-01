@@ -5,6 +5,10 @@
     width: calc(100vw - (var(--unit) * 4));
 }
 
+.article p {
+    line-height: calc(1.3em + 0.2vw);
+}
+
 .article pre[class*="language-"] {
     background-color: var(--color-primary);
     font-size: var(--font-size-small);
