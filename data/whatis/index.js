@@ -23,11 +23,18 @@ const nextjs = {
     externalUrl: "https://nextjs.org"
 }
 
+const remix = {
+    title: "Remix",
+    introUrl: "/whatis/remix",
+    externalUrl: "https://remix.run"
+}
+
 const tags = [
     reactJS,
     framework,
     mdx,
     nextjs,
+    remix,
     "Hosting",
     "WhatsApp",
     "GatsbyJS",

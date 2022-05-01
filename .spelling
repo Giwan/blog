@@ -130,6 +130,7 @@ dist
 init
 bezier
 a.k.a
+vercel
  - pages/blog/2020-10-18-loop-vs-function/index.mdx
  helper1
 
@@ -157,3 +158,4 @@ publishedDate
 DesignShots
  - data/about.mdx
 2015
+remix.run

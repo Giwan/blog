@@ -1,0 +1,47 @@
+# What is Remix
+Similar to NextJS, Remix is a react based framework. 
+It has some interesting benefits over NextJS though. 
+
+Some of the key benefits are: 
+* It's faster (see remix blog post)
+* Still works with JavaScript turned off. (SEO, etc.)
+* It promotes standard web technology (i.e form submission)
+
+The remix team has outlined [the benefits in great detail in this blog post]( 
+https://remix.run/blog/remix-vs-next) I'll just touch on a few things that stood out to me so far.
+
+Like NextJS, it's a full stack framework. 
+Some functions run on the server while some (only) run on the client. 
+Server side rendering is an important part of all this and Remix handles this as elegantly as NextJS. 
+
+## Loader function
+Export a `loader` function in a page and it will run on the server before  getting to the client. 
+Get data from an external authenticated API that requires a key. That key will not be seen by the client. 
+The resulting data can easily be passed to the client. 
+This is akin to NextJS's `getServerSideProps`. 
+https://remix.run/docs/en/v1/api/conventions#loader
+
+## Action function
+Remix allows forms to be submitted like we used to do with `<form action="/my-form-route" method="POST" />` back in the days.
+There's no need to intercept the form submission in JavaScript and preventing the default behaviour.
+Instead the form submission is received on the server. 
+To handle that, an `action` function is exported as well. 
+https://remix.run/docs/en/v1/api/conventions#action
+
+## Deployment
+Another benefit, that I particularly liked, is the deployment. 
+NextJS is created by Vercel, who also offer hosting. 
+Naturally NextJS is optimised for deployment on vercel. 
+
+While it's possible to deploy NextJS on other hosting providers, like Netlify, I would frequently encounter an issue. 
+This is subjective but Remix has this much better worked out for various hosting providers. 
+This is however something that NextJS could easily catchup with though. 
+
+## Summary
+All in all I like what Remix is aspiring too. 
+I just started playing around with it and so far it's been good. 
+
+
+Sources
+- <a href="https://remix.run/" target="_blank" rel="noopener noreferrer">remix.run</a>
+- <a href="https://remix.run/blog/remix-vs-next" target="_blank" rel="noopener noreferrer">remix.run/blog/remix-vs-next</a>
