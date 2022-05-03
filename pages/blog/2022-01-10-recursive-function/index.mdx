@@ -17,8 +17,26 @@ Validating a long list of websites can take a lot of time. In addition, it's not
 This simple post, looks at the approach taken to solve the issue. 
 
 Starting with a list of sites to validate, each site is checked individually. 
+Let's first look at a basic recursion example. It takes a starting index and an array.
+
+```JS
+
+const recursiveLoop = function(i = 0, arr) {
+    if (!(arr && arr.length) || i >= arr.length) return;
+
+    console.log(arr[i]); 
+    return recursiveLoop(i += 1, arr);
+}
+
+recursiveLoop(0, [1,2,3,4]);
+```
+
+The following example shows how this would work to actually get data from the network
 
 ```javascript
+
+import fetch from "node-fetch";
+
 
 const sites = [
     "https://mytoori.com",
@@ -26,40 +44,45 @@ const sites = [
     "https://news.ycombinator.com/",
 ]
 
-const validateXFrameHeaders = function(headers) {
+const validateXFrameHeaders = function(siteName, headers) {
     // do some validation and return boolean
     const hasXFrameOptions = headers["X-Frame-options"];
+    let msg;
     if (hasXFrameOptions && ["deny", "sameorigin"].includes(hasXFrameOptions.toLowerCase())) {
-        console.log('blocks iframe through x-frame-options');
-    }
+        msg = 'blocks iframe through x-frame-options'; 
+    } else msg = "allows iframes"; 
 
-    return true; // for the sake of the example
+    console.table({[siteName]: msg});
 }
 
-// loop over the three sites using a recursive function
-let i = 0;
-const recurisveLoop = async function() {
-    // stop the loop if the end has been reached
-    if (i >= sites.length) {
-        console.log(`Finished looping over ${sites.length} sites`);
-        return;
+// recursive container function using closure
+const fetchHeaders = function(sitesInput, actionInput) {
+    let sites = sitesInput, action = actionInput;
+
+    return async function recursiveLoop(i) {
+        // stop the loop if the end has been reached
+        if (!(sites && sites.length) || i >= sites.length) {
+            console.log(`------------ \nFinished looping over ${sites.length} sites`);
+            return;
+        }
+
+        // validation (this is very crude for the sake of the example)
+        const data = await fetch(sites[i]);
+        action(sites[i], data?.headers);
+        
+        // continue with the next iteration
+        return await recursiveLoop(i += 1);
     }
-
-    const site = sites[i]; // get the current site
-    const data = await fetch(site);
-
-    // validation (this is very crude for the sake of the example)
-    validateXFrameHeaders(data.headers); // the result is being ignored
-    
-    // continue with the next iteration
-    i += 1; 
-    recursiveLoop();
 }
-recursiveLoop(); // start the loop
+
+// sites to go over; action to take
+const start = fetchHeaders(sites, validateXFrameHeaders);
+(async () => await start(0))(); // starting point is 0
+
 ```
 
 The benefit of this is that it doesn't matter how long it takes to get the data back from the site. 
 The loop will only continue once that information has been received. 
 
-If any of the sites go over a certain amount of time the request will timeout and the loop will continue. 
-If that wait time needs to be shortened then a `setTimeout` call can be used. 
+If any of the sites go over a certain amount of time the network request will timeout and the loop will continue. 
+If that wait time needs to be shortened then `setTimeout` can be used. 

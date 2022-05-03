@@ -34,7 +34,8 @@
         "jest": "^27.5.1",
         "prettier": "^2.6.0",
         "puppeteer": "^13.5.1",
-        "streamifier": "^0.1.1"
+        "streamifier": "^0.1.1",
+        "node-fetch": "^3.2.4"
     },
     "husky": {
         "hooks": {
