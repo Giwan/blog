@@ -18,6 +18,16 @@
     font-weight: 700;
 }
 
+.articleHeader[data-draft="true"] h2 {
+    color: silver;
+}
+
+.draft {
+    margin-left: var(--unit);
+    font-size: 0.5em;
+    text-transform: uppercase;
+}
+
 /* The header shown when in the article
  * This is written this way because of 
  * line 25 in article.module.css

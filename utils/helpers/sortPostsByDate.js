@@ -6,12 +6,18 @@ import { getDateNumber } from "../helpers";
  * @param {*} p2
  * @returns
  */
-export const sortPostsByDate = (p1, p2) => {
+export const sortPostsByDate = (dateName) => (p1, p2) => {
+    if (typeof dateName !== "string" && dateName.length > 0) {
+        throw new Error("A valid dateName value is required");
+    }
+
     const [date1, date2] = [p1, p2].map((date) => {
-        const dateString = date?.module?.meta?.published;
+        const meta = date?.module?.meta;
+
+        const dateString = meta[dateName];
         if (typeof dateString !== "string") {
             throw new Error(
-                "Invalid published date. Value of type string expected"
+                `Invalid ${dateName} date. Value of type string expected. Received: ${dateString}`
             );
         }
         return getDateNumber(dateString);

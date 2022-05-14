@@ -1,0 +1,17 @@
+import Article from "../../../components/Article/Article";
+
+export const description = `
+Let's dive into JavaScript objects and how they work under the hood. 
+`
+
+export const meta = {
+    title: "JavaScript Objects",
+    description,
+    createdDate: "2022-05-10",
+    // published: "2022-05-10",
+    status: "draft",
+    readTime: 2
+}
+
+export default ({ children }) => <Article {...{meta}}>{children}</Article>
+

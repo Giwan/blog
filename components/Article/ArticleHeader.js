@@ -15,18 +15,20 @@ const dateOptions = {
 };
 
 const ArticleHeader = ({ meta, isBlogPost }) => {
-    if (!meta.published) return null;
     const dateOptionsFiltered = {
         ...dateOptions,
         weekday: isBlogPost ? "long" : undefined,
     };
+
+    const articleDate = meta.published || meta.createdDate;
+
     return (
         <div className={styles.articleItem}>
             <ArticleTitle {...{ isBlogPost, meta }} />
             <div className={styles.articleHeaderMetaDetails}>
                 <span>{meta.readTime + " minutes"}</span>
                 <span>
-                    {new Date(meta.published).toLocaleDateString(
+                    {new Date(articleDate).toLocaleDateString(
                         "en-GB",
                         dateOptionsFiltered
                     )}
@@ -42,17 +44,19 @@ const ArticleHeader = ({ meta, isBlogPost }) => {
 
 export default ArticleHeader;
 
-const ArticleTitle = ({ isBlogPost, meta: { title } }) => {
-    return (
-        <header className={styles.articleHeader}>
+const DraftText = () => <span className={styles.draft}>DRAFT</span>
+
+const isDraft = (published) => published ? "" : <DraftText />;
+
+const ArticleTitle = ({ isBlogPost, meta: { title, published } }) => (
+        <header className={styles.articleHeader} data-draft={!published}>
             {isBlogPost ? (
-                <h1 className={styles.articleHeaderh1}>{title}</h1>
+                <h1 className={styles.articleHeaderh1}>{title}{isDraft(published)}</h1>
             ) : (
-                <h2 className={styles.articleItemHeader}>{title}</h2>
+                <h2 className={styles.articleItemHeader}>{title}{isDraft(published)}</h2>
             )}
         </header>
     );
-};
 
 const OpenArrow = ({ isBlogPost }) => {
     if (isBlogPost) return null;

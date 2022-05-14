@@ -4,16 +4,24 @@ import { posts } from "../getAllPosts";
 import { articleListContainer } from "./index.module.css";
 import { sortPostsByDate } from "../utils/helpers";
 
+const isDevelopment = () => process.env.NODE_ENV === "development";
+const PUBLISHED = "published";
+const DATE_CREATED = "createdDate";
+
+const postsWithMeta = p => Boolean(p.module.meta);
+const postsWithMetaAndPublished = (p) => p.module.meta && !!p.module.meta.published
+
 /**
- * Filters out the published posts
+ * Filters out the published posts in production
+ * In development both published and drafts
+ * should be available.
+ * 
  * @param {Array} posts List of posts to filter
  * @returns 
  */
 export const publishedPosts = (posts = []) => {
-    const filteredPosts = posts.filter(
-        (p) => p.module.meta && !!p.module.meta.published
-    );
-    return filteredPosts.sort(sortPostsByDate);
+    if (!isDevelopment()) return posts.filter(postsWithMetaAndPublished).sort(sortPostsByDate(PUBLISHED));
+    return posts.filter(postsWithMeta).sort(sortPostsByDate(DATE_CREATED));
 };
 
 const Index = function () {
