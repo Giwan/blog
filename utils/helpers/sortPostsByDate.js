@@ -7,7 +7,7 @@ import { getDateNumber } from "../helpers";
  * @returns
  */
 export const sortPostsByDate = (dateName) => (p1, p2) => {
-    if (typeof dateName !== "string" && dateName.length > 0) {
+    if (!(typeof dateName === "string" && dateName.length > 0)) {
         throw new Error("A valid dateName value is required");
     }
 

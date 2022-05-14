@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`sort posts by date should sort the posts 1`] = `"Invalid published date. Value of type string expected"`;
+exports[`sort posts by date should sort the posts 1`] = `"A valid dateName value is required"`;
+
+exports[`sort posts by date should sort the posts 2`] = `"Invalid createdDate date. Value of type string expected. Received: undefined"`;

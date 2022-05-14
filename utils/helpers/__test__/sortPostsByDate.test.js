@@ -2,7 +2,7 @@ import { sortPostsByDate } from "../sortPostsByDate";
 
 describe("sort posts by date", () => {
     it("should sort the posts", () => {
-        expect(() => sortPostsByDate()).toThrowErrorMatchingSnapshot();
+        expect(() => sortPostsByDate()()).toThrowErrorMatchingSnapshot();
         const post1 = {
             module: {
                 meta: {
@@ -17,6 +17,7 @@ describe("sort posts by date", () => {
                 }
             }
         }
-        expect(sortPostsByDate(post1, post2)).toBe(2000000);
+        expect(() => sortPostsByDate("createdDate")(post1, post2)).toThrowErrorMatchingSnapshot();
+        expect(sortPostsByDate("published")(post1, post2)).toBe(2000000);
     });
 });
