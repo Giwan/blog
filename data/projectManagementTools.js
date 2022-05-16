@@ -20,6 +20,27 @@ const projectManagementTools = [
         category: categories.PROJECT_MANAGEMENT,
         labels: [labels.productivity, labels.engineering],
     },
+    {
+        title: "Tweek",
+        url: "https://tweek.so/",
+        description:
+            `Tweek Calendar is a Minimal Weekly Planner & To-Do List App. 
+            The design is quite intriguing and makes it a pleasure to use.
+            I'm not sure that this is for larger projects though. 
+            `,
+        price: 0,
+        category: categories.PROJECT_MANAGEMENT,
+        labels: [labels.productivity, labels.design],
+    },
+    {
+        title: "Notion",
+        url: "https://www.notion.so/",
+        description:
+            `A nicely design full project management tools. This is very much for larger teams. `,
+        price: 0,
+        category: categories.PROJECT_MANAGEMENT,
+        labels: [labels.productivity, labels.design],
+    },
 ];
 
 export default projectManagementTools;
