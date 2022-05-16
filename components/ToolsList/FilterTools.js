@@ -23,7 +23,7 @@ const FilterTools = function ({ setCategory, category }) {
             className={button}
             data-active={category === subCategories[label]}
         >
-            {subCategories[label]}
+            {subCategories[label]?.toLowerCase()}
         </button>
     ));
     const allButton = (

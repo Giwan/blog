@@ -14,15 +14,6 @@ import CSSWaves from "./toolsData/SVGWater.mdx";
 
 const developerTools = [
     {
-        title: "Firefox Developer",
-        url: "https://www.mozilla.org/en-US/firefox/85.0a2/whatsnew/all/",
-        description:
-            "A version of the Firefox browser specifically for developers. Especially it's support for CSS Grid is awesome",
-        price: 0,
-        category: categories.DEVELOPER,
-        labels: [labels.engineering],
-    },
-    {
         title: "Cloudinary",
         url: "https://cloudinary.com/",
         description: <Cloudinary />,
@@ -79,7 +70,7 @@ const developerTools = [
         labels: [labels.productivity, labels.engineering],
     },
     {
-        title: "CSS Shadows tool",
+        title: "CSS Shadows",
         url: "https://shadows.brumm.af/",
         description: <ShadowsBrumm />,
         price: 0,

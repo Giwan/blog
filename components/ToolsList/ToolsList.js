@@ -3,7 +3,6 @@ import tools from "../../data/tools";
 import styles from "../../styles/tools.module.css";
 import ToolItem from "./ToolItem";
 import { filteredList } from "../../utils/helpers";
-// Behance.net, Dribble.com
 
 const ToolsList = ({ category }) => (
     <section className={styles.toolsList}>

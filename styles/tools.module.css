@@ -3,6 +3,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: calc(var(--unit) * 2);
     min-height: calc(100vh - 372px);
+    margin-top: var(--unit);
 }
 
 .toolsItem {
@@ -11,7 +12,6 @@
     height: 100%;
     margin-top: var(--unit);
     box-sizing: border-box;
-    /* transition: opacity 0.25s; */
 }
 
 .toolsItem:hover {
@@ -22,61 +22,51 @@
     font-family: var(--font-family-header);
     font-size: var(--font-size-large);
     color: var(--color-primary);
+    word-wrap: break-word;
+    word-break: break-word;
+    margin-bottom: calc(var(--unit) /4);
 }
 
 .toolsItem a {
     text-decoration: none;
 }
 
-.toolsItem h2::after {
-    content: "↗";
-    color: var(--color-accent);
-    margin-left: calc(var(--unit) / 2);
-    display: inline-block;
-    line-height: 0;
-    opacity: 0;
-    transition: opacity 0.4s;
-}
-.toolsItem:hover h2::after {
-    opacity: 1;
-}
-
-.toolsItem:hover h2 {
+.toolsItem h2 {
     text-decoration: underline;
 }
 
 .toolDescription {
     font-family: var(--font-family-text-2);
-    line-height: 1.5em;
     font-size: var(--font-size-small);
 }
 
 /* Some tool items are importing an mdx description */
 .toolDescription p {
-    line-height: 1.45em;
+    line-height: calc(1.33em + 0.2vw); 
+    margin: 0;
 }
 
 .toolsItemFooter {
-    margin: var(--unit) 0;
+    margin: calc(var(--unit) /4) 0;
 }
 
 .toolsItemLabel {
     display: inline-block;
-    margin: calc(var(--unit) / 4) var(--unit) 0 0;
-    /* padding: calc(var(--unit) / 4) 0; */
-    /* background-color: var(--color-secondary-background); */
+    margin: calc(var(--unit) / 4) calc(var(--unit) / 4) 0 0;
     font-size: var(--font-size-small-x);
     font-family: var(--font-family-meta);
     color: var(--color-text-light);
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .categoryStyle {
     display: block;
     font-size: var(--font-size-small-x);
     font-family: var(--font-family-meta);
-    border-bottom: 1px solid var(--color-primary);
+    border-bottom: 1px dotted var(--color-text-light);
+    color: var(--color-text-light);
     padding-right: 5px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-align: right;
+    max-width: 100%;
 }
