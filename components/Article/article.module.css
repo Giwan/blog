@@ -6,7 +6,7 @@
 }
 
 .article p {
-    line-height: calc(1.3em + 0.2vw);
+    line-height: 1.33em;
 }
 
 .article pre[class*="language-"] {
