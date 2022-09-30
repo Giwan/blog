@@ -1,6 +1,6 @@
 {
     "[javascript]": {
         "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
-      },
-      "workbench.colorTheme": "Eva Dark Bold"
+    },
+    "workbench.colorTheme": "Solarized Light"
 }
