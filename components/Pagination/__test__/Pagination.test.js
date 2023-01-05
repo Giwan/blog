@@ -1,4 +1,4 @@
-import { isValid } from "../PaginationHelpers";
+import { isValid } from "../paginationHelpers";
 
 describe("Pagination", () => {
 
