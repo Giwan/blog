@@ -1,4 +1,7 @@
 # Add 'test' label when tests have been updated
 test: 
-  - ./**/*.spec.js
-  - ./**/*.test.js
+  - any: ['./**/*.spec.js', './**/*.test.js']
+
+# add 'documentation' label
+documentation:
+  - '**/*.md'
